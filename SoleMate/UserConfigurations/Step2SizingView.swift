@@ -9,80 +9,90 @@ import SwiftUI
 
 struct Step2SizingView: View {
     @Binding var selectedSizing: SizingOption
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
+            // Step label + progress bar
             Text("Step 2 of 3")
                 .font(.headline)
-
+            
+            ProgressView(value: 0.6666667)
+                .progressViewStyle(LinearProgressViewStyle(tint: .red))
+            
             Text("Which sizing are you most familiar with?")
                 .font(.subheadline)
-
+                .bold()
+            
             Text("""
             This helps us show you shoes in the right size range and fit. Shoe construction varies by sizing system
             """)
-            .fixedSize(horizontal: false, vertical: true)
+            .font(.footnote)
             .foregroundColor(.secondary)
-
+            .fixedSize(horizontal: false, vertical: true)
+            
+            // Sizing cards
             ForEach(SizingOption.allCases, id: \.self) { option in
                 Button(action: {
                     selectedSizing = option
                 }) {
-                    HStack {
+                    HStack(spacing: 12) {
+                        // Icon
                         Image(systemName: iconName(for: option))
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 40, height: 40)
-                            .cornerRadius(4)
-                            .padding(.trailing, 8)
-
+                            .frame(width: 48, height: 48)
+                            .padding(4)
+                        
+                        // Vertical divider
+                        Rectangle()
+                            .frame(width: 2)
+                            .foregroundColor(selectedSizing == option ? .white : Color.EEEBE3)
+                            .padding(.trailing, -6)
+                        
+                        // Texts
                         VStack(alignment: .leading, spacing: 4) {
                             Text(option.rawValue)
-                                .font(.headline)
-                                .foregroundColor(.white)
+                                .font(.body)
+                                .foregroundColor(selectedSizing == option ? .white : .red)
+                            
                             Text(tooltip(for: option))
                                 .font(.caption2)
-                                .foregroundColor(.white.opacity(0.9))
+                                .foregroundColor(selectedSizing == option ? .white.opacity(0.9) : .black)
                         }
-
+                        
                         Spacer()
-
-                        if selectedSizing == option {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.white)
-                                .font(.title2)
-                        }
                     }
                     .padding()
                     .background(
                         selectedSizing == option
                         ? Color.red
-                        : Color(UIColor.systemGray5)
+                        : Color.FCFBF9
                     )
-                    .cornerRadius(8)
+                    .cornerRadius(12)
                 }
             }
-
+            
             Spacer()
             
-            Text("""
-            We'll use your foot measurements to find the best fit regardless of sizing system
-            """)
-
+            Text("We’ll use your foot measurements to find the best fit regardless of sizing system")
+                .font(.footnote)
+                .foregroundColor(.primary)
+            
             NavigationLink(value: 3) {
                 Text("Next")
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.red)
-                    .cornerRadius(8)
+                    .cornerRadius(12)
             }
         }
         .padding()
-        .navigationTitle("Sizing System")
+        .navigationTitle("Foot Measurements")
         .navigationBarTitleDisplayMode(.inline)
+        .background(Color.EEEBE3.ignoresSafeArea())
     }
-
+    
     private func iconName(for option: SizingOption) -> String {
         switch option {
         case .women: return "figure.walk"
@@ -90,16 +100,18 @@ struct Step2SizingView: View {
         case .both:  return "figure.wave"
         }
     }
-
+    
     private func tooltip(for option: SizingOption) -> String {
         switch option {
-        case .women: return "Typically narrower fit. Women’s 8 = Men’s 6.5"
-        case .men:   return "Typically wider fit. Men’s 9 = Women’s 10.5"
-        case .both:  return "Show me options in both sizing systems"
+        case .women:
+            return "Typically narrower fit. Women’s 8 = Men’s 6.5"
+        case .men:
+            return "Typically wider fit. Men’s 9 = Women’s 10.5"
+        case .both:
+            return "Show me options in both sizing systems"
         }
     }
 }
-
 
 #Preview {
     ContentView()

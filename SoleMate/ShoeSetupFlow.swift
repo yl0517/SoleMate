@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct ShoeSetupFlow: View {
-    // Binding back to ContentView; when this becomes false, the flow ends
     @Binding var isActive: Bool
-
-    // Step 1 state
+    
     @State private var activitySelections: [String: Bool] = [
         "Running": false,
         "Walking": false,
@@ -22,20 +20,27 @@ struct ShoeSetupFlow: View {
         "Other": false
     ]
     @State private var otherActivityText: String = ""
-
-    // Step 2 state
+    
     @State private var selectedSizing: SizingOption = .women
-
-    // Step 3 state
     @State private var footLengthValue: String = ""
     @State private var footWidthValue: String = ""
     @State private var selectedLengthUnit: LengthUnit = .inches
-    @State private var selectedWidthUnit: WidthUnit  = .cm
-    @State private var selectedArch: ArchType         = .flat
-
+    @State private var selectedWidthUnit: WidthUnit = .cm
+    @State private var selectedArch: ArchType = .flat
+    
+    init(isActive: Binding<Bool>) {
+        self._isActive = isActive
+        
+        // Customize navigation title color to red
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.red]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
+    
     var body: some View {
         NavigationStack {
-            // Start on Step 1
             Step1ActivityView(
                 activitySelections: $activitySelections,
                 otherActivityText:  $otherActivityText
@@ -43,10 +48,8 @@ struct ShoeSetupFlow: View {
             .navigationDestination(for: Int.self) { step in
                 switch step {
                 case 2:
-                    // Push Step 2
                     Step2SizingView(selectedSizing: $selectedSizing)
                 case 3:
-                    // Push Step 3
                     Step3MeasurementsView(
                         isActive:           $isActive,
                         footLengthValue:    $footLengthValue,

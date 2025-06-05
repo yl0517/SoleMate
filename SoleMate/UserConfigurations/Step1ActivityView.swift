@@ -9,8 +9,8 @@ import SwiftUI
 
 struct Step1ActivityView: View {
     @Binding var activitySelections: [String: Bool]
-    @Binding var otherActivityText:  String
-
+    @Binding var otherActivityText: String
+    
     private let activityOrder: [String] = [
         "Running",
         "Walking",
@@ -20,61 +20,75 @@ struct Step1ActivityView: View {
         "Casual Wear",
         "Other"
     ]
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
+            // Step label + progress bar
             Text("Step 1 of 3")
                 .font(.headline)
-
+            
+            ProgressView(value: 0.33333333)
+                .progressViewStyle(LinearProgressViewStyle(tint: .red))
+            
             Text("What will you be using these shoes for?")
                 .font(.subheadline)
-
+            
+            // Activity options
             ForEach(activityOrder, id: \.self) { key in
-                if key == "Other" {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Toggle(isOn: Binding(
-                            get: { activitySelections["Other"] ?? false },
-                            set: { activitySelections["Other"] = $0 }
-                        )) {
-                            Text("Other (Specify)")
+                VStack(alignment: .leading, spacing: 4) {
+                    Button(action: {
+                        activitySelections[key] = !(activitySelections[key] ?? false)
+                    }) {
+                        HStack {
+                            Image(systemName: activitySelections[key] == true ? "checkmark.square.fill" : "square")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(.red)
+                            
+                            Text(key == "Other" ? "Other (Specify)" : key)
+                                .foregroundColor(.primary)
+                            
+                            Spacer()
                         }
-                        .toggleStyle(.button)
-                        .tint(Color.red)
-
-                        if activitySelections["Other"] == true {
-                            TextField("Specify activity…", text: $otherActivityText)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .padding(.leading, 24)
-                        }
+                        .padding()
+                        .background(Color.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color(UIColor.systemGray4), lineWidth: 1)
+                        )
+                        .cornerRadius(12)
                     }
-                } else {
-                    Toggle(isOn: Binding(
-                        get: { activitySelections[key] ?? false },
-                        set: { activitySelections[key] = $0 }
-                    )) {
-                        Text(key)
+                    
+                    if key == "Other", activitySelections["Other"] == true {
+                        TextField("Specify activity…", text: $otherActivityText)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.leading, 12)
                     }
-                    .toggleStyle(.button)
-                    .tint(Color.red.opacity(0.8))
                 }
             }
-
+            
             Spacer()
-
+            
             NavigationLink(value: 2) {
                 Text("Next")
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.red)
-                    .cornerRadius(8)
+                    .cornerRadius(12)
             }
             .disabled(!atLeastOneActivitySelected())
         }
         .padding()
+        .background(Color.EEEBE3.ignoresSafeArea())
     }
-
+    
     private func atLeastOneActivitySelected() -> Bool {
         return activitySelections.values.contains(true)
     }
+}
+
+#Preview {
+    ContentView()
 }

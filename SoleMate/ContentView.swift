@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct ContentView: View {
     @State private var showShoeSetup = false
 
@@ -16,6 +14,7 @@ struct ContentView: View {
         Group {
             if showShoeSetup {
                 ShoeSetupFlow(isActive: $showShoeSetup)
+                    .background(Color.EEEBE3.ignoresSafeArea())
             } else {
                 VStack(spacing: 32) {
                     Text("Temp home screen")
@@ -37,12 +36,12 @@ struct ContentView: View {
                     Spacer()
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color(.systemBackground))
+                .background(Color.EEEBE3)
             }
         }
+        .background(Color.EEEBE3.ignoresSafeArea()) // fallback for Group
     }
 }
-
 
 #Preview {
     ContentView()
