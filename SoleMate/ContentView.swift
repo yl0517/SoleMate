@@ -9,12 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showShoeSetup = false
-
+    @State private var showRecommendation = false
+    
     var body: some View {
         Group {
             if showShoeSetup {
                 ShoeSetupFlow(isActive: $showShoeSetup)
                     .background(Color.EEEBE3.ignoresSafeArea())
+            } else if showRecommendation {
+                RecommendationView(isActive: $showRecommendation)
             } else {
                 VStack(spacing: 32) {
                     Text("Temp home screen")
@@ -25,6 +28,19 @@ struct ContentView: View {
                         showShoeSetup = true
                     }) {
                         Text("Set Configurations")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.red)
+                            .cornerRadius(8)
+                    }
+                    .padding(.horizontal, 40)
+
+                    
+                    Button(action: {
+                        showRecommendation = true
+                    }) {
+                        Text("Set Recommendations")
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding()
