@@ -71,11 +71,6 @@ struct RecommendationView: View {
 
                 Spacer()
             }
-            .overlay(
-                NavBar(activeTab: $activeTab)
-                    .padding(.bottom, 0),
-                alignment: .bottom
-            )
         }
         .navigationBarHidden(true)
     }
