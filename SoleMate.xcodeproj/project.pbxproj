@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		882B078D2DF3B92600E0FAFE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 882B078C2DF3B92600E0FAFE /* FirebaseAuth */; };
+		882B078F2DF3B92C00E0FAFE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 882B078E2DF3B92C00E0FAFE /* FirebaseDatabase */; };
+		882B07912DF3B93400E0FAFE /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 882B07902DF3B93400E0FAFE /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1D4EED5A2DDC11C90047CA58 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +35,30 @@
 		1D4EED632DDC11C90047CA58 /* SoleMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoleMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		882B04C72DF3ADCD00E0FAFE /* Exceptions for "SoleMate" folder in "SoleMateTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 1D4EED582DDC11C90047CA58 /* SoleMateTests */;
+		};
+		882B04C82DF3ADCD00E0FAFE /* Exceptions for "SoleMate" folder in "SoleMateUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 1D4EED622DDC11C90047CA58 /* SoleMateUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1D4EED4E2DDC11C80047CA58 /* SoleMate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				882B04C72DF3ADCD00E0FAFE /* Exceptions for "SoleMate" folder in "SoleMateTests" target */,
+				882B04C82DF3ADCD00E0FAFE /* Exceptions for "SoleMate" folder in "SoleMateUITests" target */,
+			);
 			path = SoleMate;
 			sourceTree = "<group>";
 		};
@@ -52,6 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882B078F2DF3B92C00E0FAFE /* FirebaseDatabase in Frameworks */,
+				882B07912DF3B93400E0FAFE /* FirebaseCore in Frameworks */,
+				882B078D2DF3B92600E0FAFE /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +108,7 @@
 				1D4EED4E2DDC11C80047CA58 /* SoleMate */,
 				1D4EED5C2DDC11C90047CA58 /* SoleMateTests */,
 				1D4EED662DDC11C90047CA58 /* SoleMateUITests */,
+				882B078B2DF3B92600E0FAFE /* Frameworks */,
 				1D4EED4D2DDC11C80047CA58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +121,13 @@
 				1D4EED632DDC11C90047CA58 /* SoleMateUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		882B078B2DF3B92600E0FAFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +150,9 @@
 			);
 			name = SoleMate;
 			packageProductDependencies = (
+				882B078C2DF3B92600E0FAFE /* FirebaseAuth */,
+				882B078E2DF3B92C00E0FAFE /* FirebaseDatabase */,
+				882B07902DF3B93400E0FAFE /* FirebaseCore */,
 			);
 			productName = SoleMate;
 			productReference = 1D4EED4C2DDC11C80047CA58 /* SoleMate.app */;
@@ -195,6 +236,9 @@
 			);
 			mainGroup = 1D4EED432DDC11C80047CA58;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				882B04C22DF3AA6B00E0FAFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1D4EED4D2DDC11C80047CA58 /* Products */;
 			projectDirPath = "";
@@ -405,11 +449,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.yl0517.SoleMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -433,11 +479,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.ischool.yl0517.SoleMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -558,6 +606,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		882B04C22DF3AA6B00E0FAFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		882B078C2DF3B92600E0FAFE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 882B04C22DF3AA6B00E0FAFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		882B078E2DF3B92C00E0FAFE /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 882B04C22DF3AA6B00E0FAFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		882B07902DF3B93400E0FAFE /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 882B04C22DF3AA6B00E0FAFE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D4EED442DDC11C80047CA58 /* Project object */;
 }
