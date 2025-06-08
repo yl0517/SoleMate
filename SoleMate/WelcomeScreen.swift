@@ -4,6 +4,7 @@
 //
 //  Created by Carlos Carrillo-Sandoval on 5/23/25.
 //
+
 import SwiftUI
 
 struct WelcomeScreen: View {
@@ -47,11 +48,6 @@ struct WelcomeScreen: View {
                         Spacer()
 
                         VStack(spacing: 16) {
-                            // Register
-                            NavigationLink(destination: Register(), isActive: $goToRegister) {
-                                EmptyView()
-                            }
-
                             Button(action: {
                                 goToRegister = true
                             }) {
@@ -64,10 +60,6 @@ struct WelcomeScreen: View {
                                     .cornerRadius(16)
                             }
 
-                            NavigationLink(destination: Home(), isActive: $goToHome) {
-                                EmptyView()
-                            }
-
                             Button(action: {
                                 goToHome = true
                             }) {
@@ -78,11 +70,6 @@ struct WelcomeScreen: View {
 
                             Text("Already have an account?")
                                 .font(.system(size: 12))
-
-                  
-                            NavigationLink(destination: SignIn(), isActive: $goToSignIn) {
-                                EmptyView()
-                            }
 
                             Button(action: {
                                 goToSignIn = true
@@ -98,6 +85,15 @@ struct WelcomeScreen: View {
                         Spacer(minLength: geometry.size.height * 0.3)
                     }
                 }
+            }
+            .navigationDestination(isPresented: $goToRegister) {
+                Register()
+            }
+            .navigationDestination(isPresented: $goToSignIn) {
+                SignIn()
+            }
+            .navigationDestination(isPresented: $goToHome) {
+                Home()
             }
         }
     }

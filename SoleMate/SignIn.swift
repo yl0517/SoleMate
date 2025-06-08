@@ -5,10 +5,15 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
-struct SignIn: View{
+struct SignIn: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var errorMessage = ""
+    @State private var isLoading = false
+    @State private var navigateToHome = false
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         GeometryReader { geometry in
@@ -23,7 +28,7 @@ struct SignIn: View{
               
                     HStack {
                         Button(action: {
-                            
+                            dismiss()
                         }) {
                             HStack(spacing: 4) {
                                 Image(systemName: "chevron.left").font(.system(size: 16, weight: .medium))
@@ -42,8 +47,6 @@ struct SignIn: View{
                             .frame(width: 154)
                     }
                     .padding(.horizontal)
-                    
-            
                     
                    
                     VStack(spacing: 12) {
@@ -73,18 +76,34 @@ struct SignIn: View{
                     }
                     .padding(.horizontal, 32)
                     
+                    if !errorMessage.isEmpty {
+                        Text(errorMessage)
+                            .foregroundColor(.red)
+                            .font(.footnote)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                    }
+                    
              
                     Button(action: {
-            
+                        signInUser()
                     }) {
-                        Text("Sign In")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: 64)
-                            .padding()
-                            .background(Color.smRed)
-                            .foregroundColor(.white)
-                            .cornerRadius(16)
+                        HStack {
+                            if isLoading {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                    .scaleEffect(0.8)
+                            }
+                            Text(isLoading ? "Signing In..." : "Sign In")
+                                .fontWeight(.bold)
+                        }
+                        .frame(maxWidth: 120)
+                        .padding()
+                        .background(Color.smRed)
+                        .foregroundColor(.white)
+                        .cornerRadius(16)
                     }
+                    .disabled(isLoading)
                     .padding(.horizontal, 32)
                     
                     Spacer(minLength: geometry.size.height * 0.1)
@@ -92,9 +111,37 @@ struct SignIn: View{
             }
         }
         .ignoresSafeArea(.keyboard)
+        .navigationBarHidden(true)
+        .navigationDestination(isPresented: $navigateToHome) {
+            Home()
+        }
+    }
+    
+    private func signInUser() {
+        errorMessage = ""
+        
+        guard !email.isEmpty, !password.isEmpty else {
+            errorMessage = "Please enter both email and password."
+            return
+        }
+        
+        isLoading = true
+        
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            DispatchQueue.main.async {
+                self.isLoading = false
+                
+                if let error = error {
+                    self.errorMessage = error.localizedDescription
+                    return
+                }
+                
+                self.navigateToHome = true
+            }
+        }
     }
 }
 
-#Preview{
+#Preview {
     SignIn()
 }
