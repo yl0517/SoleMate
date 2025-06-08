@@ -25,94 +25,18 @@ SoleMate is a personalized footwear recommendation app that helps users find sho
 | Language     | Swift                                  |
 | Framework    | SwiftUI + UIKit                        |
 | Database     | Firebase Firestore (for discussions)   |
-| Local Data   | JSON file (shoe catalog)               |
+| Local Data   | JSON file                              |
 | Auth (optional) | Firebase Auth                       |
-
----
-
-## Folder Structure
-
-```
-SoleMate/
-├── Models/
-│   ├── Shoe.swift
-│   └── DiscussionPost.swift
-├── Views/
-│   ├── ShoeListView.swift
-│   ├── ShoeDetailView.swift
-│   └── DiscussionView.swift
-├── Services/
-│   ├── FirebaseManager.swift
-│   └── ShoeDataLoader.swift
-├── Resources/
-│   └── shoes.json
-├── GoogleService-Info.plist
-├── README.md
-└── SoleMateApp.swift
-```
-
----
-
-## Setup Instructions
-
-### 1. Clone the Repo
-
-```bash
-git clone https://github.com/your-team/solemate.git
-cd solemate
-```
-
-### 2. Open in Xcode
-
-Open `SoleMate.xcodeproj` or `SoleMate.xcworkspace`.
-
-### 3. Install Firebase SDK
-
-Use Swift Package Manager:
-
-```
-https://github.com/firebase/firebase-ios-sdk
-```
-
-Add:
-- FirebaseFirestore  
-- FirebaseAuth 
-
-### 4. Add Firebase Config File
-
-1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Create a Firebase project and add your iOS app  
-3. Download `GoogleService-Info.plist`  
-4. Drag it into the root of your Xcode project  
-
-### 5. Load Static Shoe Catalog
-
-Place `shoes.json` in the `Resources/` folder, and load it at launch using:
-
-```swift
-ShoeDataLoader.loadShoesIfNeeded()
-```
-
-### 6. Firestore Rules for Prototyping
-
-```js
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /posts/{post} {
-      allow read, write: if true;
-    }
-  }
-}
-```
 
 ---
 
 ## Key Screens
 
-- Shoe List – View all matched shoes  
-- Shoe Detail – See fit info, reviews, and start a discussion  
+- Shoe Recommendations – View all matched shoes  
+- Shoe Information – See detailed information about the recommended shoe
 - Discussion – Post and reply to comments  
-- Settings/Profile – (optional) Save preferences  
+- Reviews - Leave recommendaitons to shoes
+- Input Preferences and Measurements – Input foot measurements and activity type to see tailored recommendations  
 
 ---
 
@@ -122,9 +46,3 @@ service cloud.firestore {
 - Carlos Alexis Carrillo-Sandoval  
 - Ray Hwang  
 - Yoobin Lee  
-
----
-
-## License
-
-This project is for academic use only and not licensed for commercial distribution.
