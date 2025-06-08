@@ -1,13 +1,16 @@
+// Step3MeasurementsView.swift
+// SoleMate
 //
-//  Step3MeasurementsView.swift
-//  SoleMate
-//
-//  Created by Yoobin Lee on 6/3/25.
+// Created by Yoobin Lee on 6/3/25.
 //
 
 import SwiftUI
 
 struct Step3MeasurementsView: View {
+    @Binding var activitySelections: [String: Bool]
+    @Binding var otherActivityText:  String
+    @Binding var selectedSizing:     SizingOption
+
     @Binding var isActive: Bool
 
     @Binding var footLengthValue:  String
@@ -24,7 +27,6 @@ struct Step3MeasurementsView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            // Step header
             Text("Step 3 of 3")
                 .font(.headline)
 
@@ -50,9 +52,7 @@ struct Step3MeasurementsView: View {
                     .padding()
                     .background(Color.white)
                     .cornerRadius(16)
-                    // two‐parameter onChange to get the new value directly :contentReference[oaicite:0]{index=0}
                     .onChange(of: footLengthValue) { _, newValue in
-                        // Filter to digits + at most one decimal point
                         let filtered = newValue.filter { "0123456789.".contains($0) }
                         let dots = filtered.filter { $0 == "." }.count
                         if dots <= 1 {
@@ -66,7 +66,6 @@ struct Step3MeasurementsView: View {
                         }
                     }
 
-                    // in/cm segmented pill
                     unitToggle(for: LengthUnit.allCases, selection: $selectedLengthUnit)
                 }
             }
@@ -85,7 +84,6 @@ struct Step3MeasurementsView: View {
                     .padding()
                     .background(Color.white)
                     .cornerRadius(16)
-                    // two‐parameter onChange again :contentReference[oaicite:1]{index=1}
                     .onChange(of: footWidthValue) { _, newValue in
                         let filtered = newValue.filter { "0123456789.".contains($0) }
                         let dots = filtered.filter { $0 == "." }.count
@@ -100,7 +98,6 @@ struct Step3MeasurementsView: View {
                         }
                     }
 
-                    // in/cm segmented pill
                     unitToggle(for: WidthUnit.allCases, selection: $selectedWidthUnit)
                 }
             }
@@ -134,18 +131,21 @@ struct Step3MeasurementsView: View {
 
             Spacer()
 
-            Button {
+            // Updated Save button styling to match Step2 "Next" button
+            Button(action: {
+                saveConfiguration()
                 isActive = false
-            } label: {
+            }) {
                 Text("Save")
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.red)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .cornerRadius(12)
             }
             .disabled(!isFormComplete)
             .opacity(isFormComplete ? 1 : 0.5)
+
         }
         .padding()
         .navigationTitle("Foot Measurements")
@@ -162,7 +162,29 @@ struct Step3MeasurementsView: View {
         }
     }
 
-    // Reusable pill-style toggle for “in” / “cm”
+    private func saveConfiguration() {
+        let chosen = activitySelections
+            .filter { $1 }
+            .map { $0.key }
+
+        let other = activitySelections["Other"] == true
+            ? otherActivityText
+            : nil
+
+        let config = ShoeConfiguration(
+            selectedActivities: chosen,
+            otherActivity:      other,
+            sizingOption:       selectedSizing,
+            footLength:         Double(footLengthValue) ?? 0,
+            footLengthUnit:     selectedLengthUnit,
+            footWidth:          Double(footWidthValue) ?? 0,
+            footWidthUnit:      selectedWidthUnit,
+            archType:           selectedArch,
+            savedAt:            Date()
+        )
+        UserDefaults.standard.shoeConfiguration = config
+    }
+
     private func unitToggle<T: Hashable & RawRepresentable>(
         for options: [T],
         selection: Binding<T>
