@@ -1,4 +1,3 @@
-//
 //  ContentView.swift
 //  SoleMate
 //
@@ -11,6 +10,7 @@ struct ContentView: View {
     @State private var showShoeSetup = false
     @State private var activeTab: NavBar.Tab = .home
     @State private var showSavedData = false
+    @State private var favoriteShoes: [Shoe] = []    // track saved shoes
 
     var body: some View {
         Group {
@@ -59,18 +59,24 @@ struct ContentView: View {
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
 
                         case .search:
-                            RecommendationView(isActive: .constant(true))
+                            RecommendationView(
+                                isActive: .constant(true),
+                                favorites: $favoriteShoes
+                            )
 
                         case .reviews:
                             ReviewView(isActive: .constant(true))
 
-                        case .discussion, .saved:
+                        case .discussion:
                             VStack {
-                                Text("Coming Soon")
+                                Text("Discussion")
                                     .font(.largeTitle)
                                 Spacer()
                             }
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+                        case .saved:
+                            FavoritesView(favorites: $favoriteShoes)
                         }
                     }
                     .padding(.bottom, 80) // Reserve space for NavBar
