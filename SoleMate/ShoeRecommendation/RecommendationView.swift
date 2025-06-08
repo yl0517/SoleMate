@@ -219,3 +219,6 @@ private struct ShoeCardView: View {
     }
 }
 
+#Preview {
+    RecommendationView(isActive: .constant(true))
+}

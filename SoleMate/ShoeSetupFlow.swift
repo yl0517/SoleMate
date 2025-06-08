@@ -51,6 +51,11 @@ struct ShoeSetupFlow: View {
                     Step2SizingView(selectedSizing: $selectedSizing)
                 case 3:
                     Step3MeasurementsView(
+                        // New bindings:
+                        activitySelections: $activitySelections,
+                        otherActivityText:  $otherActivityText,
+                        selectedSizing:     $selectedSizing,
+                        // Existing bindings:
                         isActive:           $isActive,
                         footLengthValue:    $footLengthValue,
                         footWidthValue:     $footWidthValue,
