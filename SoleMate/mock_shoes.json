@@ -15,7 +15,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 257.38
   },
   {
     "id": 2,
@@ -33,7 +34,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 297.49
   },
   {
     "id": 3,
@@ -51,7 +53,8 @@
       "maxFootWidth": 9.7,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 152.73
   },
   {
     "id": 4,
@@ -70,7 +73,8 @@
       "maxFootWidth": 8.8,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 142.14
   },
   {
     "id": 5,
@@ -87,7 +91,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 180.74
   },
   {
     "id": 6,
@@ -106,7 +111,8 @@
       "maxFootWidth": 9.3,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 238.53
   },
   {
     "id": 7,
@@ -125,7 +131,8 @@
       "maxFootWidth": 9.9,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 282.18
   },
   {
     "id": 8,
@@ -142,7 +149,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 119.08
   },
   {
     "id": 9,
@@ -161,7 +169,8 @@
       "maxFootWidth": 10.5,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 172.39
   },
   {
     "id": 10,
@@ -180,7 +189,8 @@
       "maxFootWidth": 8.8,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 272.53
   },
   {
     "id": 11,
@@ -199,7 +209,8 @@
       "maxFootWidth": 10.2,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 164.01
   },
   {
     "id": 12,
@@ -218,7 +229,8 @@
       "maxFootWidth": 9.0,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 102.64
   },
   {
     "id": 13,
@@ -235,7 +247,8 @@
       "maxFootWidth": 8.9,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 293.9
   },
   {
     "id": 14,
@@ -254,7 +267,8 @@
       "maxFootWidth": 9.6,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 90.84
   },
   {
     "id": 15,
@@ -271,7 +285,8 @@
       "maxFootWidth": 8.5,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 64.89
   },
   {
     "id": 16,
@@ -290,7 +305,8 @@
       "maxFootWidth": 9.5,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 163.46
   },
   {
     "id": 17,
@@ -308,7 +324,8 @@
       "maxFootWidth": 9.2,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 241.33
   },
   {
     "id": 18,
@@ -325,7 +342,8 @@
       "maxFootWidth": 9.2,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 158.69
   },
   {
     "id": 19,
@@ -344,7 +362,8 @@
       "maxFootWidth": 8.4,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 195.66
   },
   {
     "id": 20,
@@ -362,7 +381,8 @@
       "maxFootWidth": 8.9,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 225.33
   },
   {
     "id": 21,
@@ -379,7 +399,8 @@
       "maxFootWidth": 10.3,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 141.74
   },
   {
     "id": 22,
@@ -398,7 +419,8 @@
       "maxFootWidth": 9.7,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 138.68
   },
   {
     "id": 23,
@@ -415,7 +437,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 93.33
   },
   {
     "id": 24,
@@ -433,7 +456,8 @@
       "maxFootWidth": 8.7,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 192.29
   },
   {
     "id": 25,
@@ -451,7 +475,8 @@
       "maxFootWidth": 10.3,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 144.18
   },
   {
     "id": 26,
@@ -470,7 +495,8 @@
       "maxFootWidth": 10.4,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 61.9
   },
   {
     "id": 27,
@@ -487,7 +513,8 @@
       "maxFootWidth": 9.8,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 69.78
   },
   {
     "id": 28,
@@ -504,7 +531,8 @@
       "maxFootWidth": 10.7,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 60.62
   },
   {
     "id": 29,
@@ -521,7 +549,8 @@
       "maxFootWidth": 10.6,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 269.31
   },
   {
     "id": 30,
@@ -540,7 +569,8 @@
       "maxFootWidth": 8.6,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 181.67
   },
   {
     "id": 31,
@@ -558,7 +588,8 @@
       "maxFootWidth": 9.0,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 203.53
   },
   {
     "id": 32,
@@ -577,7 +608,8 @@
       "maxFootWidth": 10.6,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 206.75
   },
   {
     "id": 33,
@@ -595,7 +627,8 @@
       "maxFootWidth": 9.3,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 122.81
   },
   {
     "id": 34,
@@ -612,7 +645,8 @@
       "maxFootWidth": 10.0,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 118.99
   },
   {
     "id": 35,
@@ -629,7 +663,8 @@
       "maxFootWidth": 9.7,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 65.45
   },
   {
     "id": 36,
@@ -647,7 +682,8 @@
       "maxFootWidth": 9.0,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 133.02
   },
   {
     "id": 37,
@@ -665,7 +701,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 233.13
   },
   {
     "id": 38,
@@ -682,7 +719,8 @@
       "maxFootWidth": 9.7,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 76.16
   },
   {
     "id": 39,
@@ -700,7 +738,8 @@
       "maxFootWidth": 9.7,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 76.26
   },
   {
     "id": 40,
@@ -718,7 +757,8 @@
       "maxFootWidth": 8.7,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 190.36
   },
   {
     "id": 41,
@@ -735,7 +775,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 223.03
   },
   {
     "id": 42,
@@ -754,7 +795,8 @@
       "maxFootWidth": 10.3,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 281.96
   },
   {
     "id": 43,
@@ -772,7 +814,8 @@
       "maxFootWidth": 10.0,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 229.47
   },
   {
     "id": 44,
@@ -790,7 +833,8 @@
       "maxFootWidth": 9.0,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 199.82
   },
   {
     "id": 45,
@@ -807,7 +851,8 @@
       "maxFootWidth": 9.4,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 257.62
   },
   {
     "id": 46,
@@ -826,7 +871,8 @@
       "maxFootWidth": 9.9,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 151.78
   },
   {
     "id": 47,
@@ -844,7 +890,8 @@
       "maxFootWidth": 10.4,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 134.49
   },
   {
     "id": 48,
@@ -862,7 +909,8 @@
       "maxFootWidth": 8.7,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 158.01
   },
   {
     "id": 49,
@@ -879,7 +927,8 @@
       "maxFootWidth": 8.9,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 234.23
   },
   {
     "id": 50,
@@ -896,7 +945,8 @@
       "maxFootWidth": 10.3,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 106.8
   },
   {
     "id": 51,
@@ -915,7 +965,8 @@
       "maxFootWidth": 10.8,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 187.47
   },
   {
     "id": 52,
@@ -933,7 +984,8 @@
       "maxFootWidth": 10.6,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 186.62
   },
   {
     "id": 53,
@@ -951,7 +1003,8 @@
       "maxFootWidth": 8.8,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 284.03
   },
   {
     "id": 54,
@@ -970,7 +1023,8 @@
       "maxFootWidth": 9.8,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 201.32
   },
   {
     "id": 55,
@@ -989,7 +1043,8 @@
       "maxFootWidth": 9.8,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 149.53
   },
   {
     "id": 56,
@@ -1006,7 +1061,8 @@
       "maxFootWidth": 9.9,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 261.35
   },
   {
     "id": 57,
@@ -1023,7 +1079,8 @@
       "maxFootWidth": 10.5,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 177.04
   },
   {
     "id": 58,
@@ -1041,7 +1098,8 @@
       "maxFootWidth": 9.5,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 84.98
   },
   {
     "id": 59,
@@ -1058,7 +1116,8 @@
       "maxFootWidth": 9.4,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 193.13
   },
   {
     "id": 60,
@@ -1076,7 +1135,8 @@
       "maxFootWidth": 10.5,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 178.93
   },
   {
     "id": 61,
@@ -1093,7 +1153,8 @@
       "maxFootWidth": 9.8,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 229.28
   },
   {
     "id": 62,
@@ -1112,7 +1173,8 @@
       "maxFootWidth": 9.3,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 52.78
   },
   {
     "id": 63,
@@ -1131,7 +1193,8 @@
       "maxFootWidth": 10.0,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 283.08
   },
   {
     "id": 64,
@@ -1149,7 +1212,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 153.37
   },
   {
     "id": 65,
@@ -1168,7 +1232,8 @@
       "maxFootWidth": 9.7,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 53.62
   },
   {
     "id": 66,
@@ -1186,7 +1251,8 @@
       "maxFootWidth": 8.9,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 194.36
   },
   {
     "id": 67,
@@ -1204,7 +1270,8 @@
       "maxFootWidth": 8.8,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 195.41
   },
   {
     "id": 68,
@@ -1222,7 +1289,8 @@
       "maxFootWidth": 9.4,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 263.02
   },
   {
     "id": 69,
@@ -1239,7 +1307,8 @@
       "maxFootWidth": 10.6,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 132.75
   },
   {
     "id": 70,
@@ -1257,7 +1326,8 @@
       "maxFootWidth": 9.4,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 264.81
   },
   {
     "id": 71,
@@ -1274,7 +1344,8 @@
       "maxFootWidth": 10.4,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 167.08
   },
   {
     "id": 72,
@@ -1293,7 +1364,8 @@
       "maxFootWidth": 10.7,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 237.65
   },
   {
     "id": 73,
@@ -1310,7 +1382,8 @@
       "maxFootWidth": 9.7,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 235.32
   },
   {
     "id": 74,
@@ -1328,7 +1401,8 @@
       "maxFootWidth": 9.6,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 194.89
   },
   {
     "id": 75,
@@ -1346,7 +1420,8 @@
       "maxFootWidth": 10.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 115.87
   },
   {
     "id": 76,
@@ -1365,7 +1440,8 @@
       "maxFootWidth": 9.5,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 198.05
   },
   {
     "id": 77,
@@ -1382,7 +1458,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 269.37
   },
   {
     "id": 78,
@@ -1401,7 +1478,8 @@
       "maxFootWidth": 10.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 68.5
   },
   {
     "id": 79,
@@ -1420,7 +1498,8 @@
       "maxFootWidth": 10.1,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 290.34
   },
   {
     "id": 80,
@@ -1439,7 +1518,8 @@
       "maxFootWidth": 9.4,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 168.9
   },
   {
     "id": 81,
@@ -1458,7 +1538,8 @@
       "maxFootWidth": 9.2,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 79.54
   },
   {
     "id": 82,
@@ -1475,7 +1556,8 @@
       "maxFootWidth": 9.8,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 165.81
   },
   {
     "id": 83,
@@ -1493,7 +1575,8 @@
       "maxFootWidth": 8.7,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 226.57
   },
   {
     "id": 84,
@@ -1511,7 +1594,8 @@
       "maxFootWidth": 10.4,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 195.02
   },
   {
     "id": 85,
@@ -1530,7 +1614,8 @@
       "maxFootWidth": 9.9,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 282.17
   },
   {
     "id": 86,
@@ -1548,7 +1633,8 @@
       "maxFootWidth": 9.4,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 232.28
   },
   {
     "id": 87,
@@ -1565,7 +1651,8 @@
       "maxFootWidth": 8.9,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 157.09
   },
   {
     "id": 88,
@@ -1583,7 +1670,8 @@
       "maxFootWidth": 10.3,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 275.78
   },
   {
     "id": 89,
@@ -1601,7 +1689,8 @@
       "maxFootWidth": 9.9,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 293.71
   },
   {
     "id": 90,
@@ -1620,7 +1709,8 @@
       "maxFootWidth": 10.0,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 199.17
   },
   {
     "id": 91,
@@ -1639,7 +1729,8 @@
       "maxFootWidth": 9.9,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 81.52
   },
   {
     "id": 92,
@@ -1657,7 +1748,8 @@
       "maxFootWidth": 9.5,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 91.33
   },
   {
     "id": 93,
@@ -1675,7 +1767,8 @@
       "maxFootWidth": 8.3,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 158.95
   },
   {
     "id": 94,
@@ -1694,7 +1787,8 @@
       "maxFootWidth": 9.8,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 253.94
   },
   {
     "id": 95,
@@ -1713,7 +1807,8 @@
       "maxFootWidth": 8.4,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 54.15
   },
   {
     "id": 96,
@@ -1730,7 +1825,8 @@
       "maxFootWidth": 9.9,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 116.64
   },
   {
     "id": 97,
@@ -1749,7 +1845,8 @@
       "maxFootWidth": 8.7,
       "footWidthUnit": "cm"
     },
-    "archType": "High"
+    "archType": "High",
+    "price": 247.48
   },
   {
     "id": 98,
@@ -1766,7 +1863,8 @@
       "maxFootWidth": 9.1,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 59.19
   },
   {
     "id": 99,
@@ -1784,7 +1882,8 @@
       "maxFootWidth": 9.7,
       "footWidthUnit": "cm"
     },
-    "archType": "Flat"
+    "archType": "Flat",
+    "price": 119.5
   },
   {
     "id": 100,
@@ -1802,6 +1901,7 @@
       "maxFootWidth": 10.3,
       "footWidthUnit": "cm"
     },
-    "archType": "Medium"
+    "archType": "Medium",
+    "price": 145.4
   }
 ]
