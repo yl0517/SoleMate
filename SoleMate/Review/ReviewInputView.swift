@@ -16,32 +16,45 @@ struct ReviewInputView: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(spacing: 0) {
+                // TextEditor with clipped rounded background
                 TextEditor(text: $reviewText)
-                    .frame(height: 200)
-                    .overlay(RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.gray.opacity(0.3)))
+                    .padding(8)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                    )
                     .padding()
 
-                Button(action: submitReview) {
-                    Text(isLoading ? "Submitting…" : "Submit Review")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.CA0013)
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
+                // Centered, intrinsic-sized Submit button
+                HStack {
+                    Spacer()
+                    Button(action: submitReview) {
+                        Text(isLoading ? "Submitting…" : "Submit Review")
+                            .font(.system(size: 16, weight: .semibold))
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 12)
+                            .background(Color.CA0013)
+                            .foregroundColor(.white)
+                            .cornerRadius(12)
+                    }
+                    .disabled(reviewText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || isLoading)
+                    Spacer()
                 }
-                .disabled(reviewText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-                          || isLoading)
+                .padding(.bottom, 20)
 
                 Spacer()
             }
             .navigationTitle("Review \(shoe.name)")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") { dismiss() }
                 }
             }
+            .background(Color.EEEBE3.ignoresSafeArea())
         }
     }
 
