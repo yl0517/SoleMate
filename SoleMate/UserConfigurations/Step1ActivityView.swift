@@ -10,6 +10,7 @@ import SwiftUI
 struct Step1ActivityView: View {
     @Binding var activitySelections: [String: Bool]
     @Binding var otherActivityText: String
+    @Binding var showStep2: Bool
     
     private let activityOrder: [String] = [
         "Running",
@@ -70,7 +71,10 @@ struct Step1ActivityView: View {
             
             Spacer()
             
-            NavigationLink(value: 2) {
+           
+            Button(action: {
+                showStep2 = true
+            }) {
                 Text("Next")
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)

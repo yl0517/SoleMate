@@ -10,6 +10,9 @@ import SwiftUI
 struct ShoeSetupFlow: View {
     @Binding var isActive: Bool
     
+    @State private var showStep2 = false
+    @State private var showStep3 = false
+    
     @State private var activitySelections: [String: Bool] = [
         "Running": false,
         "Walking": false,
@@ -28,48 +31,40 @@ struct ShoeSetupFlow: View {
     @State private var selectedWidthUnit: WidthUnit = .cm
     @State private var selectedArch: ArchType = .flat
     
-    init(isActive: Binding<Bool>) {
-        self._isActive = isActive
-        
-        // Customize navigation title color to red
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.red]
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    }
-    
     var body: some View {
-        NavigationStack {
-            Step1ActivityView(
-                activitySelections: $activitySelections,
-                otherActivityText:  $otherActivityText
+        Step1ActivityView(
+            activitySelections: $activitySelections,
+            otherActivityText: $otherActivityText,
+            showStep2: $showStep2
+        )
+        .navigationTitle("Activity Type")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationDestination(isPresented: $showStep2) {
+            Step2SizingView(
+                selectedSizing: $selectedSizing,
+                showStep3: $showStep3
             )
-            .navigationDestination(for: Int.self) { step in
-                switch step {
-                case 2:
-                    Step2SizingView(selectedSizing: $selectedSizing)
-                case 3:
-                    Step3MeasurementsView(
-                        // New bindings:
-                        activitySelections: $activitySelections,
-                        otherActivityText:  $otherActivityText,
-                        selectedSizing:     $selectedSizing,
-                        // Existing bindings:
-                        isActive:           $isActive,
-                        footLengthValue:    $footLengthValue,
-                        footWidthValue:     $footWidthValue,
-                        selectedLengthUnit: $selectedLengthUnit,
-                        selectedWidthUnit:  $selectedWidthUnit,
-                        selectedArch:       $selectedArch
-                    )
-                default:
-                    EmptyView()
-                }
-            }
-            .navigationTitle("Activity Type")
-            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationViewStyle(.stack)
+        .navigationDestination(isPresented: $showStep3) {
+            Step3MeasurementsView(
+                activitySelections: $activitySelections,
+                otherActivityText: $otherActivityText,
+                selectedSizing: $selectedSizing,
+                isActive: $isActive,
+                footLengthValue: $footLengthValue,
+                footWidthValue: $footWidthValue,
+                selectedLengthUnit: $selectedLengthUnit,
+                selectedWidthUnit: $selectedWidthUnit,
+                selectedArch: $selectedArch,
+                showStep2: $showStep2,
+                showStep3: $showStep3
+            )
+        }
+        .onChange(of: isActive) { _, newValue in
+            if !newValue {
+                showStep2 = false
+                showStep3 = false
+            }
+        }
     }
 }
