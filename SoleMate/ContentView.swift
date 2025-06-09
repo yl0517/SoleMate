@@ -68,12 +68,7 @@ struct ContentView: View {
                             ReviewView(isActive: .constant(true))
 
                         case .discussion:
-                            VStack {
-                                Text("Discussion")
-                                    .font(.largeTitle)
-                                Spacer()
-                            }
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            DiscussionView()
 
                         case .saved:
                             FavoritesView(favorites: $favoriteShoes)
