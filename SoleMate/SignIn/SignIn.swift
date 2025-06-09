@@ -113,7 +113,7 @@ struct SignIn: View {
         .ignoresSafeArea(.keyboard)
         .navigationBarHidden(true)
         .navigationDestination(isPresented: $navigateToHome) {
-            Home()
+            ContentView()
         }
     }
     

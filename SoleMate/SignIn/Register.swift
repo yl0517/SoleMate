@@ -13,7 +13,7 @@ struct Register: View {
     @State private var password = ""
     @State private var errorMessage = ""
     @State private var isLoading = false
-    @State private var navigateToNext = false
+    @State private var navigateToHome = false
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -115,8 +115,8 @@ struct Register: View {
             .ignoresSafeArea(.keyboard)
         }
         .navigationBarHidden(true)
-        .navigationDestination(isPresented: $navigateToNext) {
-            FootMeasurementsP1()
+        .navigationDestination(isPresented: $navigateToHome) {
+            ContentView()
         }
     }
 
@@ -150,6 +150,7 @@ struct Register: View {
     
     private func saveUserData(uid: String) {
         let userData: [String: Any] = [
+            "id": uid,
             "name": name,
             "email": email,
             "createdAt": Date().timeIntervalSince1970
@@ -166,13 +167,13 @@ struct Register: View {
                     self.errorMessage = "Failed to complete registration. Please try again."
                     print("Database error: \(error.localizedDescription)")
                 } else {
-                    // Success - navigate to next screen
-                    self.navigateToNext = true
+                    self.navigateToHome = true
                 }
             }
         }
     }
 }
+
 #Preview {
     Register()
 }
