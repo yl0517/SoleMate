@@ -5,13 +5,14 @@ struct RecommendationContentView: View {
     let shoes: [Shoe]
     @Binding var favorites: [Shoe]
     @State private var selectedCategory: Category = .running
-
+    @State private var selectedShoeForReview: Shoe?
+    
     enum Category: String, CaseIterable {
         case running = "Running"
         case walking = "Walking"
         case weightlifting = "Weightlifting"
     }
-
+    
     var body: some View {
         VStack(spacing: 0) {
             // Category pills
@@ -36,7 +37,7 @@ struct RecommendationContentView: View {
             }
             .padding(.leading, 24)
             .padding(.top, 16)
-
+            
             // Compare button
             HStack {
                 Button(action: {}) {
@@ -57,24 +58,34 @@ struct RecommendationContentView: View {
                 Spacer()
             }
             .padding(.top, 16)
-
+            
             // Shoe list
             ScrollView {
                 VStack(spacing: 24) {
                     ForEach(shoes) { shoe in
-                        ShoeCardView(shoe: shoe, isFavorite: favorites.contains(shoe)) {
-                            if let idx = favorites.firstIndex(of: shoe) {
-                                favorites.remove(at: idx)
-                            } else {
-                                favorites.append(shoe)
+                        ShoeCardView(
+                            shoe: shoe,
+                            isFavorite: favorites.contains(shoe),
+                            onFavoriteToggle: {
+                                if let idx = favorites.firstIndex(of: shoe) {
+                                    favorites.remove(at: idx)
+                                } else {
+                                    favorites.append(shoe)
+                                }
+                            },
+                            onReview: {
+                                selectedShoeForReview = shoe
                             }
-                        }
+                        )
                     }
                 }
                 .padding(.horizontal, 24)
                 .padding(.vertical, 16)
                 .padding(.bottom, 140)
             }
+        }
+        .sheet(item: $selectedShoeForReview) { shoe in
+            ReviewInputView(shoe: shoe)
         }
     }
 }
