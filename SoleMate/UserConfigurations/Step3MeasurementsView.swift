@@ -11,15 +11,19 @@ struct Step3MeasurementsView: View {
     @Binding var otherActivityText:  String
     @Binding var selectedSizing:     SizingOption
 
-    @Binding var isActive: Bool
+    @Binding var isActive: Bool 
 
     @Binding var footLengthValue:  String
     @Binding var footWidthValue:   String
     @Binding var selectedLengthUnit: LengthUnit
     @Binding var selectedWidthUnit:  WidthUnit
     @Binding var selectedArch:       ArchType
+    
+    
+    @Binding var showStep2: Bool
+    @Binding var showStep3: Bool
 
-    // Only allow “Save” when both length and width have non-empty values
+    
     private var isFormComplete: Bool {
         !footLengthValue.trimmingCharacters(in: .whitespaces).isEmpty
             && !footWidthValue.trimmingCharacters(in: .whitespaces).isEmpty
@@ -33,7 +37,7 @@ struct Step3MeasurementsView: View {
             ProgressView(value: 1.0)
                 .progressViewStyle(LinearProgressViewStyle(tint: .red))
 
-            Text("You’re just a few steps away from finding your perfect pair of shoes")
+            Text("You're just a few steps away from finding your perfect pair of shoes")
                 .font(.subheadline)
                 .foregroundColor(.primary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -131,10 +135,21 @@ struct Step3MeasurementsView: View {
 
             Spacer()
 
-            // Updated Save button styling to match Step2 "Next" button
+            
             Button(action: {
+                
                 saveConfiguration()
-                isActive = false
+               
+                
+                
+                showStep3 = false
+                showStep2 = false
+                
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    isActive = false
+                    
+                }
             }) {
                 Text("Save")
                     .foregroundColor(.white)

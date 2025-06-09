@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Step2SizingView: View {
     @Binding var selectedSizing: SizingOption
+    @Binding var showStep3: Bool
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -74,11 +75,14 @@ struct Step2SizingView: View {
             
             Spacer()
             
-            Text("We’ll use your foot measurements to find the best fit regardless of sizing system")
+            Text("We'll use your foot measurements to find the best fit regardless of sizing system")
                 .font(.footnote)
                 .foregroundColor(.primary)
             
-            NavigationLink(value: 3) {
+            
+            Button(action: {
+                showStep3 = true
+            }) {
                 Text("Next")
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
@@ -104,9 +108,9 @@ struct Step2SizingView: View {
     private func tooltip(for option: SizingOption) -> String {
         switch option {
         case .women:
-            return "Typically narrower fit. Women’s 8 = Men’s 6.5"
+            return "Typically narrower fit. Women's 8 = Men's 6.5"
         case .men:
-            return "Typically wider fit. Men’s 9 = Women’s 10.5"
+            return "Typically wider fit. Men's 9 = Women's 10.5"
         case .both:
             return "Show me options in both sizing systems"
         }
