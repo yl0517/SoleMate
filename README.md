@@ -24,9 +24,9 @@ SoleMate is a personalized footwear recommendation app that helps users find sho
 |--------------|----------------------------------------|
 | Language     | Swift                                  |
 | Framework    | SwiftUI + UIKit                        |
-| Database     | Firebase Realtime Database   |
+| Database     | Firebase Realtime Database             |
 | Local Data   | JSON file                              |
-| Auth (optional) | Firebase Auth                       |
+| Auth         | Firebase Auth                          |
 
 ---
 
