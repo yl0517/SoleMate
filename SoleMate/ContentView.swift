@@ -10,8 +10,8 @@ struct ContentView: View {
     @State private var showShoeSetup = false
     @State private var activeTab: NavBar.Tab = .home
     @State private var showSavedData = false
-    @State private var favoriteShoes: [Shoe] = []    // track saved shoes
-
+    @State private var favoriteShoes: [Shoe] = []
+    
     var body: some View {
         Group {
             if showShoeSetup {
@@ -19,70 +19,69 @@ struct ContentView: View {
                     .background(Color.EEEBE3.ignoresSafeArea())
             } else {
                 ZStack(alignment: .bottom) {
-                    // Background
                     Color.EEEBE3
                         .ignoresSafeArea()
-
-                    // Main content based on active tab
+                    
                     VStack(spacing: 0) {
                         switch activeTab {
                         case .home:
-                            VStack(spacing: 32) {
-                                Text("Temp home screen")
-                                    .font(.largeTitle)
+                            VStack(spacing: 24) {
+                                Image("sole-mate-logo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100)
+                                
+                                Image("sole-mate-logo-text")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 200)
+                                
+                                HStack(spacing: 16) {
+                                    Button("Set Configurations") {
+                                        showShoeSetup = true
+                                    }
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity)
                                     .padding()
-
-                                // Start configuration flow
-                                Button("Set Configurations") {
-                                    showShoeSetup = true
+                                    .background(Color.CA0013)
+                                    .cornerRadius(12)
+                                    
+                                    Button("Current Configurations") {
+                                        showSavedData = true
+                                    }
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color.CA0013)
+                                    .cornerRadius(12)
                                 }
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.red)
-                                .cornerRadius(8)
                                 .padding(.horizontal, 40)
-
-                                // Debug: view raw saved data
-                                Button("View User Saved Data") {
-                                    showSavedData = true
-                                }
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.red)
-                                .cornerRadius(8)
-                                .padding(.horizontal, 40)
-
-                                Spacer()
                             }
+                            .padding(.top, 0)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
-
+                            
                         case .search:
                             RecommendationView(
                                 isActive: .constant(true),
                                 favorites: $favoriteShoes
                             )
-
                         case .reviews:
                             ReviewView(isActive: .constant(true))
-
                         case .discussion:
                             DiscussionView()
-
                         case .saved:
                             FavoritesView(favorites: $favoriteShoes)
                         }
                     }
-                    .padding(.bottom, 80) // Reserve space for NavBar
-
-                    // Navigation Bar pinned to bottom
+                    .padding(.bottom, 120)
+                    
                     NavBar(activeTab: $activeTab)
                         .padding(.bottom, 20)
                 }
             }
         }
-        // Sheet to display raw JSON stored in UserDefaults
         .sheet(isPresented: $showSavedData) {
             SavedDataView()
         }
@@ -92,15 +91,53 @@ struct ContentView: View {
 
 struct SavedDataView: View {
     @Environment(\.dismiss) var dismiss
-
+    
     var body: some View {
         NavigationStack {
-            ScrollView {
-                Text(rawJsonString())
-                    .font(.system(.body, design: .monospaced))
-                    .padding()
+            ZStack {
+                Color.EEEBE3
+                    .ignoresSafeArea()
+                
+                if let config = loadConfig() {
+                    List {
+                        Section("Activities") {
+                            ForEach(config.selectedActivities, id: \.self) { act in
+                                Text(act)
+                            }
+                        }
+                        if let other = config.otherActivity, !other.isEmpty {
+                            Section("Other Activity") {
+                                Text(other)
+                            }
+                        }
+                        Section("Sizing Option") {
+                            Text(config.sizingOption.rawValue)
+                        }
+                        Section("Foot Length") {
+                            Text("\(config.footLength, specifier: "%.1f") \(config.footLengthUnit.rawValue)")
+                        }
+                        Section("Foot Width") {
+                            Text("\(config.footWidth, specifier: "%.1f") \(config.footWidthUnit.rawValue)")
+                        }
+                        Section("Arch Type") {
+                            Text(config.archType.rawValue)
+                        }
+                        Section("Saved At") {
+                            Text(DateFormatter.localizedString(
+                                from: config.savedAt,
+                                dateStyle: .medium,
+                                timeStyle: .short
+                            ))
+                        }
+                    }
+                    .listStyle(InsetGroupedListStyle())
+                    .scrollContentBackground(.hidden)
+                } else {
+                    Text("No saved configuration")
+                        .foregroundColor(.secondary)
+                }
             }
-            .navigationTitle("Saved Data")
+            .navigationTitle("Current Configurations")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Close") { dismiss() }
@@ -108,14 +145,9 @@ struct SavedDataView: View {
             }
         }
     }
-
-    private func rawJsonString() -> String {
-        let key = "ShoeConfigurationKey"
-        guard let data = UserDefaults.standard.data(forKey: key),
-              let json = String(data: data, encoding: .utf8) else {
-            return "No saved configuration"
-        }
-        return json
+    
+    private func loadConfig() -> ShoeConfiguration? {
+        UserDefaults.standard.shoeConfiguration
     }
 }
 
