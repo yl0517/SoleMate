@@ -1,0 +1,1807 @@
+[
+  {
+    "id": 1,
+    "name": "New Balance Model 492",
+    "activities": [
+      "Walking",
+      "Casual Wear"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 27.4,
+      "maxFootLength": 28.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.6,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 2,
+    "name": "Reebok Model 810",
+    "activities": [
+      "Casual Wear",
+      "Walking"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 22.7,
+      "maxFootLength": 24.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.5,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 3,
+    "name": "Under Armour Model 410",
+    "activities": [
+      "Casual Wear",
+      "Walking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 24.3,
+      "maxFootLength": 26.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.9,
+      "maxFootWidth": 9.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 4,
+    "name": "Nike Model 829",
+    "activities": [
+      "Other",
+      "Walking",
+      "Casual Wear"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 26.7,
+      "maxFootLength": 28.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 8.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 5,
+    "name": "Under Armour Model 587",
+    "activities": [
+      "Hiking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 27.2,
+      "maxFootLength": 27.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 6,
+    "name": "Puma Model 454",
+    "activities": [
+      "Walking",
+      "Weightlifting",
+      "Running"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 25.0,
+      "maxFootLength": 26.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 9.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 7,
+    "name": "Adidas Model 824",
+    "activities": [
+      "Hiking",
+      "Casual Wear",
+      "Weightlifting"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 24.0,
+      "maxFootLength": 24.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.3,
+      "maxFootWidth": 9.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 8,
+    "name": "Puma Model 793",
+    "activities": [
+      "Walking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 26.2,
+      "maxFootLength": 27.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 9,
+    "name": "Brooks Model 950",
+    "activities": [
+      "Hiking",
+      "Casual Wear",
+      "Other"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 25.5,
+      "maxFootLength": 27.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.7,
+      "maxFootWidth": 10.5,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 10,
+    "name": "ASICS Model 346",
+    "activities": [
+      "Running",
+      "Casual Wear",
+      "Weightlifting"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 23.6,
+      "maxFootLength": 24.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.2,
+      "maxFootWidth": 8.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 11,
+    "name": "Reebok Model 267",
+    "activities": [
+      "Walking",
+      "Other",
+      "Casual Wear"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 24.6,
+      "maxFootLength": 26.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.8,
+      "maxFootWidth": 10.2,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 12,
+    "name": "Nike Model 378",
+    "activities": [
+      "Running",
+      "Weightlifting",
+      "Walking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 22.1,
+      "maxFootLength": 22.8,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.1,
+      "maxFootWidth": 9.0,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 13,
+    "name": "Reebok Model 271",
+    "activities": [
+      "Running"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 22.8,
+      "maxFootLength": 23.3,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.2,
+      "maxFootWidth": 8.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 14,
+    "name": "Nike Model 841",
+    "activities": [
+      "Casual Wear",
+      "Other",
+      "Walking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 23.7,
+      "maxFootLength": 24.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.7,
+      "maxFootWidth": 9.6,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 15,
+    "name": "ASICS Model 875",
+    "activities": [
+      "Casual Wear"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 22.5,
+      "maxFootLength": 24.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.1,
+      "maxFootWidth": 8.5,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 16,
+    "name": "Adidas Model 686",
+    "activities": [
+      "Other",
+      "Casual Wear",
+      "Work"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 26.6,
+      "maxFootLength": 28.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.7,
+      "maxFootWidth": 9.5,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 17,
+    "name": "New Balance Model 666",
+    "activities": [
+      "Weightlifting",
+      "Hiking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 24.0,
+      "maxFootLength": 25.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.5,
+      "maxFootWidth": 9.2,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 18,
+    "name": "Hoka One One Model 413",
+    "activities": [
+      "Other"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 23.7,
+      "maxFootLength": 25.3,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.2,
+      "maxFootWidth": 9.2,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 19,
+    "name": "New Balance Model 212",
+    "activities": [
+      "Other",
+      "Hiking",
+      "Casual Wear"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 24.2,
+      "maxFootLength": 25.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.0,
+      "maxFootWidth": 8.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 20,
+    "name": "Puma Model 891",
+    "activities": [
+      "Casual Wear",
+      "Hiking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 26.9,
+      "maxFootLength": 28.3,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.5,
+      "maxFootWidth": 8.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 21,
+    "name": "Reebok Model 247",
+    "activities": [
+      "Running"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 25.0,
+      "maxFootLength": 25.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.5,
+      "maxFootWidth": 10.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 22,
+    "name": "New Balance Model 271",
+    "activities": [
+      "Other",
+      "Work",
+      "Casual Wear"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 25.3,
+      "maxFootLength": 26.3,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.4,
+      "maxFootWidth": 9.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 23,
+    "name": "Hoka One One Model 888",
+    "activities": [
+      "Casual Wear"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 24.2,
+      "maxFootLength": 25.8,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.6,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 24,
+    "name": "Nike Model 921",
+    "activities": [
+      "Walking",
+      "Hiking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 25.3,
+      "maxFootLength": 26.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 8.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 25,
+    "name": "Nike Model 426",
+    "activities": [
+      "Running",
+      "Walking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 22.7,
+      "maxFootLength": 23.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.4,
+      "maxFootWidth": 10.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 26,
+    "name": "Nike Model 207",
+    "activities": [
+      "Hiking",
+      "Walking",
+      "Casual Wear"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 24.7,
+      "maxFootLength": 25.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 10.0,
+      "maxFootWidth": 10.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 27,
+    "name": "Puma Model 925",
+    "activities": [
+      "Work"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 25.0,
+      "maxFootLength": 26.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.3,
+      "maxFootWidth": 9.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 28,
+    "name": "Nike Model 748",
+    "activities": [
+      "Weightlifting"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 26.4,
+      "maxFootLength": 27.8,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.9,
+      "maxFootWidth": 10.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 29,
+    "name": "Under Armour Model 755",
+    "activities": [
+      "Work"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 26.1,
+      "maxFootLength": 27.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.6,
+      "maxFootWidth": 10.6,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 30,
+    "name": "Reebok Model 677",
+    "activities": [
+      "Walking",
+      "Casual Wear",
+      "Work"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 24.7,
+      "maxFootLength": 26.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 8.6,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 31,
+    "name": "Puma Model 312",
+    "activities": [
+      "Running",
+      "Hiking"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 23.2,
+      "maxFootLength": 24.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.5,
+      "maxFootWidth": 9.0,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 32,
+    "name": "Reebok Model 400",
+    "activities": [
+      "Walking",
+      "Work",
+      "Weightlifting"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 26.2,
+      "maxFootLength": 28.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 10.0,
+      "maxFootWidth": 10.6,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 33,
+    "name": "Hoka One One Model 450",
+    "activities": [
+      "Running",
+      "Weightlifting"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 26.1,
+      "maxFootLength": 27.6,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.7,
+      "maxFootWidth": 9.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 34,
+    "name": "Under Armour Model 954",
+    "activities": [
+      "Hiking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 23.9,
+      "maxFootLength": 24.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.4,
+      "maxFootWidth": 10.0,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 35,
+    "name": "Saucony Model 989",
+    "activities": [
+      "Work"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 25.6,
+      "maxFootLength": 26.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.8,
+      "maxFootWidth": 9.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 36,
+    "name": "Puma Model 716",
+    "activities": [
+      "Walking",
+      "Weightlifting"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 26.3,
+      "maxFootLength": 27.6,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.5,
+      "maxFootWidth": 9.0,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 37,
+    "name": "Hoka One One Model 561",
+    "activities": [
+      "Running",
+      "Walking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 24.3,
+      "maxFootLength": 26.3,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.1,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 38,
+    "name": "Hoka One One Model 929",
+    "activities": [
+      "Work"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 26.6,
+      "maxFootLength": 27.6,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.1,
+      "maxFootWidth": 9.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 39,
+    "name": "Saucony Model 499",
+    "activities": [
+      "Other",
+      "Hiking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 22.2,
+      "maxFootLength": 23.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.7,
+      "maxFootWidth": 9.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 40,
+    "name": "Under Armour Model 281",
+    "activities": [
+      "Walking",
+      "Casual Wear"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 22.3,
+      "maxFootLength": 23.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 8.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 41,
+    "name": "Brooks Model 467",
+    "activities": [
+      "Hiking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 23.6,
+      "maxFootLength": 24.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.8,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 42,
+    "name": "Adidas Model 101",
+    "activities": [
+      "Weightlifting",
+      "Walking",
+      "Work"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 26.0,
+      "maxFootLength": 27.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.4,
+      "maxFootWidth": 10.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 43,
+    "name": "Under Armour Model 632",
+    "activities": [
+      "Casual Wear",
+      "Weightlifting"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 27.5,
+      "maxFootLength": 28.8,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.1,
+      "maxFootWidth": 10.0,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 44,
+    "name": "Brooks Model 586",
+    "activities": [
+      "Running",
+      "Weightlifting"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 26.4,
+      "maxFootLength": 27.6,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 9.0,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 45,
+    "name": "Saucony Model 495",
+    "activities": [
+      "Other"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 24.4,
+      "maxFootLength": 25.7,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.5,
+      "maxFootWidth": 9.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 46,
+    "name": "Under Armour Model 238",
+    "activities": [
+      "Hiking",
+      "Running",
+      "Weightlifting"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 25.0,
+      "maxFootLength": 26.3,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.0,
+      "maxFootWidth": 9.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 47,
+    "name": "Reebok Model 312",
+    "activities": [
+      "Walking",
+      "Weightlifting"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 24.6,
+      "maxFootLength": 26.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 10.0,
+      "maxFootWidth": 10.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 48,
+    "name": "Nike Model 833",
+    "activities": [
+      "Hiking",
+      "Casual Wear"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 23.6,
+      "maxFootLength": 25.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.4,
+      "maxFootWidth": 8.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 49,
+    "name": "Under Armour Model 779",
+    "activities": [
+      "Work"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 26.6,
+      "maxFootLength": 28.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.4,
+      "maxFootWidth": 8.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 50,
+    "name": "New Balance Model 188",
+    "activities": [
+      "Hiking"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 27.5,
+      "maxFootLength": 28.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.8,
+      "maxFootWidth": 10.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 51,
+    "name": "Nike Model 675",
+    "activities": [
+      "Work",
+      "Casual Wear",
+      "Hiking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 24.9,
+      "maxFootLength": 26.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.8,
+      "maxFootWidth": 10.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 52,
+    "name": "Brooks Model 177",
+    "activities": [
+      "Walking",
+      "Casual Wear"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 26.4,
+      "maxFootLength": 28.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.7,
+      "maxFootWidth": 10.6,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 53,
+    "name": "Hoka One One Model 527",
+    "activities": [
+      "Running",
+      "Walking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 25.8,
+      "maxFootLength": 26.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 8.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 54,
+    "name": "Adidas Model 812",
+    "activities": [
+      "Other",
+      "Weightlifting",
+      "Walking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 27.9,
+      "maxFootLength": 29.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.2,
+      "maxFootWidth": 9.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 55,
+    "name": "Under Armour Model 958",
+    "activities": [
+      "Weightlifting",
+      "Other",
+      "Work"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 27.9,
+      "maxFootLength": 28.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.4,
+      "maxFootWidth": 9.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 56,
+    "name": "Under Armour Model 675",
+    "activities": [
+      "Hiking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 23.8,
+      "maxFootLength": 24.7,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.2,
+      "maxFootWidth": 9.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 57,
+    "name": "Saucony Model 636",
+    "activities": [
+      "Work"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 24.1,
+      "maxFootLength": 24.7,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.7,
+      "maxFootWidth": 10.5,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 58,
+    "name": "New Balance Model 870",
+    "activities": [
+      "Work",
+      "Running"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 22.4,
+      "maxFootLength": 24.3,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.6,
+      "maxFootWidth": 9.5,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 59,
+    "name": "Nike Model 549",
+    "activities": [
+      "Weightlifting"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 25.9,
+      "maxFootLength": 26.6,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.9,
+      "maxFootWidth": 9.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 60,
+    "name": "Reebok Model 119",
+    "activities": [
+      "Walking",
+      "Running"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 27.4,
+      "maxFootLength": 28.7,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.7,
+      "maxFootWidth": 10.5,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 61,
+    "name": "New Balance Model 592",
+    "activities": [
+      "Walking"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 22.1,
+      "maxFootLength": 23.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.5,
+      "maxFootWidth": 9.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 62,
+    "name": "Brooks Model 114",
+    "activities": [
+      "Work",
+      "Casual Wear",
+      "Other"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 27.9,
+      "maxFootLength": 28.7,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.7,
+      "maxFootWidth": 9.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 63,
+    "name": "Adidas Model 413",
+    "activities": [
+      "Work",
+      "Weightlifting",
+      "Casual Wear"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 24.4,
+      "maxFootLength": 26.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.0,
+      "maxFootWidth": 10.0,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 64,
+    "name": "Hoka One One Model 184",
+    "activities": [
+      "Walking",
+      "Weightlifting"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 27.0,
+      "maxFootLength": 28.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.7,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 65,
+    "name": "Reebok Model 198",
+    "activities": [
+      "Weightlifting",
+      "Hiking",
+      "Walking"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 24.7,
+      "maxFootLength": 26.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.2,
+      "maxFootWidth": 9.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 66,
+    "name": "Puma Model 663",
+    "activities": [
+      "Walking",
+      "Running"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 23.3,
+      "maxFootLength": 24.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.0,
+      "maxFootWidth": 8.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 67,
+    "name": "Under Armour Model 920",
+    "activities": [
+      "Weightlifting",
+      "Other"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 23.6,
+      "maxFootLength": 24.8,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.0,
+      "maxFootWidth": 8.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 68,
+    "name": "ASICS Model 655",
+    "activities": [
+      "Weightlifting",
+      "Running"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 26.1,
+      "maxFootLength": 28.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.9,
+      "maxFootWidth": 9.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 69,
+    "name": "Brooks Model 112",
+    "activities": [
+      "Casual Wear"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 24.9,
+      "maxFootLength": 25.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.8,
+      "maxFootWidth": 10.6,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 70,
+    "name": "Brooks Model 557",
+    "activities": [
+      "Walking",
+      "Other"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 23.6,
+      "maxFootLength": 25.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.9,
+      "maxFootWidth": 9.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 71,
+    "name": "ASICS Model 983",
+    "activities": [
+      "Casual Wear"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 23.7,
+      "maxFootLength": 25.6,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.6,
+      "maxFootWidth": 10.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 72,
+    "name": "Under Armour Model 736",
+    "activities": [
+      "Walking",
+      "Work",
+      "Hiking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 27.1,
+      "maxFootLength": 28.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 10.0,
+      "maxFootWidth": 10.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 73,
+    "name": "New Balance Model 126",
+    "activities": [
+      "Casual Wear"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 25.1,
+      "maxFootLength": 25.8,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.9,
+      "maxFootWidth": 9.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 74,
+    "name": "Hoka One One Model 379",
+    "activities": [
+      "Hiking",
+      "Running"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 22.5,
+      "maxFootLength": 24.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.1,
+      "maxFootWidth": 9.6,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 75,
+    "name": "Adidas Model 154",
+    "activities": [
+      "Other",
+      "Work"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 25.7,
+      "maxFootLength": 27.1,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.5,
+      "maxFootWidth": 10.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 76,
+    "name": "Under Armour Model 206",
+    "activities": [
+      "Hiking",
+      "Walking",
+      "Casual Wear"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 27.8,
+      "maxFootLength": 28.6,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.1,
+      "maxFootWidth": 9.5,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 77,
+    "name": "New Balance Model 960",
+    "activities": [
+      "Running"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 27.8,
+      "maxFootLength": 28.3,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 78,
+    "name": "Adidas Model 966",
+    "activities": [
+      "Weightlifting",
+      "Casual Wear",
+      "Other"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 27.0,
+      "maxFootLength": 28.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.4,
+      "maxFootWidth": 10.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 79,
+    "name": "Puma Model 182",
+    "activities": [
+      "Walking",
+      "Hiking",
+      "Weightlifting"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 23.7,
+      "maxFootLength": 24.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.8,
+      "maxFootWidth": 10.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 80,
+    "name": "Under Armour Model 521",
+    "activities": [
+      "Hiking",
+      "Other",
+      "Running"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 26.3,
+      "maxFootLength": 27.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.8,
+      "maxFootWidth": 9.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 81,
+    "name": "ASICS Model 570",
+    "activities": [
+      "Weightlifting",
+      "Other",
+      "Walking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 22.2,
+      "maxFootLength": 23.2,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.6,
+      "maxFootWidth": 9.2,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 82,
+    "name": "Saucony Model 905",
+    "activities": [
+      "Work"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 24.4,
+      "maxFootLength": 25.3,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.2,
+      "maxFootWidth": 9.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 83,
+    "name": "Under Armour Model 118",
+    "activities": [
+      "Walking",
+      "Hiking"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 23.3,
+      "maxFootLength": 24.8,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.3,
+      "maxFootWidth": 8.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 84,
+    "name": "Hoka One One Model 927",
+    "activities": [
+      "Other",
+      "Weightlifting"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 22.3,
+      "maxFootLength": 24.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.8,
+      "maxFootWidth": 10.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 85,
+    "name": "Under Armour Model 980",
+    "activities": [
+      "Work",
+      "Other",
+      "Hiking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 23.7,
+      "maxFootLength": 24.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.3,
+      "maxFootWidth": 9.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 86,
+    "name": "Nike Model 131",
+    "activities": [
+      "Weightlifting",
+      "Other"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 24.9,
+      "maxFootLength": 26.8,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.9,
+      "maxFootWidth": 9.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 87,
+    "name": "Saucony Model 897",
+    "activities": [
+      "Work"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 24.2,
+      "maxFootLength": 25.6,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.4,
+      "maxFootWidth": 8.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 88,
+    "name": "Adidas Model 291",
+    "activities": [
+      "Walking",
+      "Hiking"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 26.1,
+      "maxFootLength": 28.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.8,
+      "maxFootWidth": 10.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 89,
+    "name": "Brooks Model 640",
+    "activities": [
+      "Casual Wear",
+      "Work"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 26.3,
+      "maxFootLength": 26.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.3,
+      "maxFootWidth": 9.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 90,
+    "name": "New Balance Model 815",
+    "activities": [
+      "Hiking",
+      "Weightlifting",
+      "Running"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 26.4,
+      "maxFootLength": 27.8,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.4,
+      "maxFootWidth": 10.0,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 91,
+    "name": "Reebok Model 536",
+    "activities": [
+      "Casual Wear",
+      "Walking",
+      "Hiking"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 27.8,
+      "maxFootLength": 29.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.4,
+      "maxFootWidth": 9.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 92,
+    "name": "Nike Model 151",
+    "activities": [
+      "Other",
+      "Weightlifting"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 23.0,
+      "maxFootLength": 24.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.6,
+      "maxFootWidth": 9.5,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 93,
+    "name": "Nike Model 914",
+    "activities": [
+      "Other",
+      "Casual Wear"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 22.6,
+      "maxFootLength": 24.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.0,
+      "maxFootWidth": 8.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 94,
+    "name": "Reebok Model 577",
+    "activities": [
+      "Walking",
+      "Work",
+      "Other"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 25.9,
+      "maxFootLength": 27.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.3,
+      "maxFootWidth": 9.8,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 95,
+    "name": "ASICS Model 358",
+    "activities": [
+      "Walking",
+      "Work",
+      "Running"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 25.1,
+      "maxFootLength": 26.5,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.1,
+      "maxFootWidth": 8.4,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 96,
+    "name": "ASICS Model 999",
+    "activities": [
+      "Hiking"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 22.3,
+      "maxFootLength": 22.9,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.5,
+      "maxFootWidth": 9.9,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 97,
+    "name": "Nike Model 643",
+    "activities": [
+      "Running",
+      "Walking",
+      "Other"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 23.0,
+      "maxFootLength": 24.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.0,
+      "maxFootWidth": 8.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "High"
+  },
+  {
+    "id": 98,
+    "name": "Nike Model 851",
+    "activities": [
+      "Walking"
+    ],
+    "sizingOption": "both",
+    "sizeRange": {
+      "minFootLength": 26.0,
+      "maxFootLength": 27.0,
+      "footLengthUnit": "cm",
+      "minFootWidth": 8.4,
+      "maxFootWidth": 9.1,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  },
+  {
+    "id": 99,
+    "name": "Hoka One One Model 611",
+    "activities": [
+      "Casual Wear",
+      "Weightlifting"
+    ],
+    "sizingOption": "women",
+    "sizeRange": {
+      "minFootLength": 23.0,
+      "maxFootLength": 24.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.3,
+      "maxFootWidth": 9.7,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Flat"
+  },
+  {
+    "id": 100,
+    "name": "Puma Model 247",
+    "activities": [
+      "Casual Wear",
+      "Other"
+    ],
+    "sizingOption": "men",
+    "sizeRange": {
+      "minFootLength": 22.6,
+      "maxFootLength": 24.4,
+      "footLengthUnit": "cm",
+      "minFootWidth": 9.5,
+      "maxFootWidth": 10.3,
+      "footWidthUnit": "cm"
+    },
+    "archType": "Medium"
+  }
+]

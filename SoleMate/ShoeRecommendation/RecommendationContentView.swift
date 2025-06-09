@@ -1,11 +1,3 @@
-//
-//  RecommendationContentView.swift
-//  SoleMate
-//
-//  Created by Jung H Hwang on 6/8/25.
-//
-
-
 // RecommendationContentView.swift
 import SwiftUI
 
@@ -15,7 +7,9 @@ struct RecommendationContentView: View {
     @State private var selectedCategory: Category = .running
 
     enum Category: String, CaseIterable {
-        case running = "Running", walking = "Walking", weightlifting = "Weightlifting"
+        case running = "Running"
+        case walking = "Walking"
+        case weightlifting = "Weightlifting"
     }
 
     var body: some View {

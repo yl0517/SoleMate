@@ -1,11 +1,3 @@
-//
-//  ShoeCardView.swift
-//  SoleMate
-//
-//  Created by Jung H Hwang on 6/8/25.
-//
-
-
 // ShoeCardView.swift
 import SwiftUI
 
@@ -23,12 +15,10 @@ struct ShoeCardView: View {
                 .shadow(color: Color.black.opacity(0.042), radius: 22, x: 0, y: 6)
 
             HStack(spacing: 12) {
-                Image(shoe.imageName)
-                    .resizable()
-                    .scaledToFill()
+                // placeholder in place of real image:
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.gray.opacity(0.2))
                     .frame(width: 124, height: 124)
-                    .clipped()
-                    .cornerRadius(16)
                     .padding(.leading, 8)
                     .padding(.vertical, 6)
 
@@ -46,6 +36,7 @@ struct ShoeCardView: View {
                             .foregroundColor(Color.CA0013)
                     }
 
+                    // price/description are empty stubs for now
                     Text(shoe.price)
                         .font(.system(size: 12, weight: .semibold))
                         .foregroundColor(Color.textDark)
@@ -58,6 +49,7 @@ struct ShoeCardView: View {
                 .padding(.vertical, 6)
                 .padding(.trailing, 8)
             }
+            .frame(height: 136)
 
             Button(action: onFavoriteToggle) {
                 Image(systemName: isFavorite ? "heart.fill" : "heart")
