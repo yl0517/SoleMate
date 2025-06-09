@@ -1,4 +1,3 @@
-// RecommendationContentView.swift
 import SwiftUI
 
 struct RecommendationContentView: View {
@@ -24,29 +23,45 @@ struct RecommendationContentView: View {
     private var filteredShoes: [Shoe] {
         shoes.filter { shoe in
             let matchesSearch = searchText.isEmpty ||
-            shoe.name.localizedCaseInsensitiveContains(searchText)
+                shoe.name.localizedCaseInsensitiveContains(searchText)
             
             let matchesActivity = selectedActivities.isEmpty ||
-            !selectedActivities.intersection(shoe.activities).isEmpty
+                !selectedActivities.intersection(shoe.activities).isEmpty
             
             let matchesCustom: Bool = {
                 guard useCustomFilter, let cfg = config else { return true }
-                guard cfg.footLengthUnit.rawValue == shoe.sizeRange.footLengthUnit,
-                      cfg.footLength >= shoe.sizeRange.minFootLength,
-                      cfg.footLength <= shoe.sizeRange.maxFootLength else {
+                
+                // convert user-entered measurements into cm
+                let lengthCm = (cfg.footLengthUnit == .inches)
+                    ? cfg.footLength * 2.54
+                    : cfg.footLength
+                guard
+                    lengthCm >= shoe.sizeRange.minFootLength,
+                    lengthCm <= shoe.sizeRange.maxFootLength
+                else {
                     return false
                 }
-                guard cfg.footWidthUnit.rawValue == shoe.sizeRange.footWidthUnit,
-                      cfg.footWidth >= shoe.sizeRange.minFootWidth,
-                      cfg.footWidth <= shoe.sizeRange.maxFootWidth else {
+                
+                let widthCm = (cfg.footWidthUnit == .inches)
+                    ? cfg.footWidth * 2.54
+                    : cfg.footWidth
+                guard
+                    widthCm >= shoe.sizeRange.minFootWidth,
+                    widthCm <= shoe.sizeRange.maxFootWidth
+                else {
                     return false
                 }
+                
+                // arch type match
                 guard shoe.archType.localizedCaseInsensitiveContains(cfg.archType.rawValue) else {
                     return false
                 }
-                let opt = shoe.sizingOption.lowercased()
+                
+                // sizing option match (women/men/both)
+                let opt  = shoe.sizingOption.lowercased()
                 let want = cfg.sizingOption.rawValue.lowercased()
                 guard opt == want || opt == "both" else { return false }
+                
                 return true
             }()
             
@@ -121,7 +136,6 @@ struct RecommendationContentView: View {
         .onAppear {
             config = UserDefaults.standard.shoeConfiguration
         }
-        // present the review sheet when needed
         .sheet(item: $selectedForReview) { shoe in
             ReviewInputView(shoe: shoe)
         }
