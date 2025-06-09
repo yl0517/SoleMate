@@ -12,130 +12,93 @@ struct ContentView: View {
     @State private var showSavedData = false
     @State private var favoriteShoes: [Shoe] = []
     
+
     var body: some View {
-        Group {
+        ZStack(alignment: .bottom) {
+            // Background
+            Color.EEEBE3
+                .ignoresSafeArea()
+
             if showShoeSetup {
+                // Shoe setup flow
                 ShoeSetupFlow(isActive: $showShoeSetup)
                     .background(Color.EEEBE3.ignoresSafeArea())
             } else {
-                ZStack(alignment: .bottom) {
-                    Color.EEEBE3
-                        .ignoresSafeArea()
-                    
-                    VStack(spacing: 0) {
-                        switch activeTab {
-                        case .home:
-                            VStack(spacing: 24) {
-                                Image("sole-mate-logo")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100)
-                                
-                                Image("sole-mate-logo-text")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 200)
-                                
-                                HStack(spacing: 16) {
-                                    Button("Set Configurations") {
-                                        showShoeSetup = true
-                                    }
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .background(Color.CA0013)
-                                    .cornerRadius(12)
-                                    
-                                    Button("Current Configurations") {
-                                        showSavedData = true
-                                    }
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .background(Color.CA0013)
-                                    .cornerRadius(12)
-                                }
-                                .padding(.horizontal, 40)
+                // Main content
+                VStack(spacing: 0) {
+                    switch activeTab {
+                    case .home:
+                        // Inline Home UI
+                        VStack(spacing: 32) {
+                            Text("Temp home screen")
+                                .font(.largeTitle)
+                                .padding()
+
+                            Button("Set Configurations") {
+                                showShoeSetup = true
                             }
-                            .padding(.top, 0)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            
-                        case .search:
-                            RecommendationView(
-                                isActive: .constant(true),
-                                favorites: $favoriteShoes
-                            )
-                        case .reviews:
-                            ReviewView(isActive: .constant(true))
-                        case .discussion:
-                            DiscussionView()
-                        case .saved:
-                            FavoritesView(favorites: $favoriteShoes)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.red)
+                            .cornerRadius(8)
+                            .padding(.horizontal, 40)
+
+                            Button("View User Saved Data") {
+                                showSavedData = true
+                            }
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.red)
+                            .cornerRadius(8)
+                            .padding(.horizontal, 40)
+
+                            Spacer()
                         }
+                        .padding(.horizontal, 40)
+
+                    case .search:
+                        RecommendationView(
+                            isActive: .constant(true),
+                            favorites: $favoriteShoes
+                        )
+
+                    case .reviews:
+                        ReviewView(isActive: .constant(true))
+
+                    case .discussion:
+                        DiscussionView()
+
+                    case .saved:
+                        FavoritesView()
                     }
-                    .padding(.bottom, 120)
-                    
+
+                    // Reserve space then draw NavBar
+                    Spacer()
                     NavBar(activeTab: $activeTab)
                         .padding(.bottom, 20)
                 }
             }
         }
+
         .sheet(isPresented: $showSavedData) {
             SavedDataView()
         }
-        .background(Color.EEEBE3.ignoresSafeArea())
     }
 }
 
+// MARK: – SavedDataView
+
 struct SavedDataView: View {
-    @Environment(\.dismiss) var dismiss
-    
+    @Environment(\.dismiss) private var dismiss
+
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.EEEBE3
-                    .ignoresSafeArea()
-                
-                if let config = loadConfig() {
-                    List {
-                        Section("Activities") {
-                            ForEach(config.selectedActivities, id: \.self) { act in
-                                Text(act)
-                            }
-                        }
-                        if let other = config.otherActivity, !other.isEmpty {
-                            Section("Other Activity") {
-                                Text(other)
-                            }
-                        }
-                        Section("Sizing Option") {
-                            Text(config.sizingOption.rawValue)
-                        }
-                        Section("Foot Length") {
-                            Text("\(config.footLength, specifier: "%.1f") \(config.footLengthUnit.rawValue)")
-                        }
-                        Section("Foot Width") {
-                            Text("\(config.footWidth, specifier: "%.1f") \(config.footWidthUnit.rawValue)")
-                        }
-                        Section("Arch Type") {
-                            Text(config.archType.rawValue)
-                        }
-                        Section("Saved At") {
-                            Text(DateFormatter.localizedString(
-                                from: config.savedAt,
-                                dateStyle: .medium,
-                                timeStyle: .short
-                            ))
-                        }
-                    }
-                    .listStyle(InsetGroupedListStyle())
-                    .scrollContentBackground(.hidden)
-                } else {
-                    Text("No saved configuration")
-                        .foregroundColor(.secondary)
-                }
+            ScrollView {
+                Text(loadRawConfig())
+                    .font(.system(.body, design: .monospaced))
+                    .padding()
             }
             .navigationTitle("Current Configurations")
             .toolbar {
@@ -145,11 +108,17 @@ struct SavedDataView: View {
             }
         }
     }
-    
-    private func loadConfig() -> ShoeConfiguration? {
-        UserDefaults.standard.shoeConfiguration
+
+    private func loadRawConfig() -> String {
+        let key = "ShoeConfigurationKey"
+        guard let data = UserDefaults.standard.data(forKey: key),
+              let s = String(data: data, encoding: .utf8)
+        else { return "No saved configuration" }
+        return s
     }
 }
+
+// MARK: – Preview
 
 #Preview {
     ContentView()

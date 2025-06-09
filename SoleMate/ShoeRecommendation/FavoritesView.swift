@@ -1,15 +1,19 @@
 // FavoritesView.swift
-// SoleMate
-
 import SwiftUI
+import FirebaseAuth
+import FirebaseDatabase
 
 struct FavoritesView: View {
-    @Binding var favorites: [Shoe]
+    @StateObject private var repo = FirebaseFavoritesRepository()
 
     var body: some View {
         VStack(spacing: 0) {
             HeaderView(title: "SAVED")
-            FavoritesContentView(favorites: $favorites)
+            FavoritesContentView(
+                shoes: repo.favorites,
+                onToggle: repo.toggleFavorite(_:)
+            )
         }
+        .background(Color.EEEBE3.ignoresSafeArea())
     }
 }
