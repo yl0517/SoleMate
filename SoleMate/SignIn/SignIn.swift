@@ -12,20 +12,21 @@ struct SignIn: View {
     @State private var password = ""
     @State private var errorMessage = ""
     @State private var isLoading = false
-    @State private var navigateToHome = false
     @Environment(\.dismiss) private var dismiss
+    
+    let onSuccess: () -> Void
     
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-               
+                
                 Image("shoes-3")
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea().overlay(AppConstants.Colors.backgroundOverlay)
                 
                 VStack(spacing: 20) {
-              
+                    
                     HStack {
                         Button(action: {
                             dismiss()
@@ -48,7 +49,7 @@ struct SignIn: View {
                     }
                     .padding(.horizontal)
                     
-                   
+                    
                     VStack(spacing: 12) {
                         Image("sole-mate-logo")
                             .resizable()
@@ -60,7 +61,7 @@ struct SignIn: View {
                             .foregroundColor(.smBlack)
                     }
                     
-                
+                    
                     VStack(spacing: 16) {
                         TextField("Email", text: $email)
                             .keyboardType(.emailAddress)
@@ -84,7 +85,7 @@ struct SignIn: View {
                             .padding(.horizontal)
                     }
                     
-             
+                    
                     Button(action: {
                         signInUser()
                     }) {
@@ -112,36 +113,25 @@ struct SignIn: View {
         }
         .ignoresSafeArea(.keyboard)
         .navigationBarHidden(true)
-        .navigationDestination(isPresented: $navigateToHome) {
-            ContentView()
-        }
     }
     
     private func signInUser() {
-        errorMessage = ""
-        
         guard !email.isEmpty, !password.isEmpty else {
             errorMessage = "Please enter both email and password."
             return
         }
-        
         isLoading = true
         
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             DispatchQueue.main.async {
                 self.isLoading = false
-                
                 if let error = error {
                     self.errorMessage = error.localizedDescription
-                    return
+                } else {
+                    dismiss()        // close the fullScreenCover
+                    onSuccess()      // tell WelcomeScreen to show home
                 }
-                
-                self.navigateToHome = true
             }
         }
     }
-}
-
-#Preview {
-    SignIn()
 }

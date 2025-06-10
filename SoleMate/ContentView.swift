@@ -14,79 +14,67 @@ struct ContentView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            // Brand background
             Color.EEEBE3
                 .ignoresSafeArea()
             
-            if showShoeSetup {
-                // Shoe setup flow
-                ShoeSetupFlow(isActive: $showShoeSetup)
-                    .background(Color.EEEBE3.ignoresSafeArea())
-            } else {
-                // Main content
-                VStack(spacing: 0) {
-                    switch activeTab {
-                    case .home:
-                        VStack(spacing: 24) {
-                            // App icon
-                            Image("sole-mate-logo")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100)
-                            
-                            Image("sole-mate-logo-text")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 200)
-                            
-                            HStack(spacing: 16) {
-                                Button("Set Configurations") {
-                                    showShoeSetup = true
-                                }
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.CA0013)
-                                .cornerRadius(12)
-                                
-                                Button("Current Configurations") {
-                                    showSavedData = true
-                                }
-                                .font(.headline)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color.CA0013)
-                                .cornerRadius(12)
+            VStack(spacing: 0) {
+                switch activeTab {
+                case .home:
+                    VStack(spacing: 24) {
+                        Image("sole-mate-logo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100)
+                        Image("sole-mate-logo-text")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200)
+                        
+                        HStack(spacing: 16) {
+                            Button("Set Configurations") {
+                                showShoeSetup = true
                             }
-                            .padding(.horizontal, 40)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.CA0013)
+                            .cornerRadius(12)
+                            
+                            Button("Current Configurations") {
+                                showSavedData = true
+                            }
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.CA0013)
+                            .cornerRadius(12)
                         }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        
-                    case .search:
-                        RecommendationView(
-                            isActive: .constant(true),
-                            favorites: $favoriteShoes
-                        )
-                        
-                    case .reviews:
-                        ReviewView(isActive: .constant(true))
-                        
-                    case .discussion:
-                        DiscussionView()
-                        
-                    case .saved:
-                        FavoritesView()
+                        .padding(.horizontal, 40)
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     
-                    Spacer()
+                case .search:
+                    RecommendationView(isActive: .constant(true), favorites: $favoriteShoes)
                     
-                    // NavBar
-                    NavBar(activeTab: $activeTab)
-                        .padding(.bottom, 20)
+                case .discussion:
+                    DiscussionView()
+                    
+                case .saved:
+                    FavoritesView()
+                    
+                case .reviews:
+                    ReviewView(isActive: .constant(true))
                 }
+                
+                NavBar(activeTab: $activeTab)
+                    .padding(.bottom, 20)
             }
+        }
+        // ← present the flow modally instead of inline
+        .fullScreenCover(isPresented: $showShoeSetup) {
+            ShoeSetupFlow(isActive: $showShoeSetup)
         }
         .sheet(isPresented: $showSavedData) {
             SavedDataView()
@@ -154,8 +142,4 @@ struct SavedDataView: View {
     private func loadConfig() -> ShoeConfiguration? {
         UserDefaults.standard.shoeConfiguration
     }
-}
-
-#Preview {
-    ContentView()
 }
