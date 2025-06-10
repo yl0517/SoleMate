@@ -14,6 +14,9 @@ struct RecommendationContentView: View {
     // For presenting the review sheet
     @State private var selectedForReview: Shoe?
     
+    @State private var minPrice: Double = 0
+    @State private var maxPrice: Double = 300
+    
     // derive unique activity filters from your data
     private var allActivities: [String] {
         Array(Set(shoes.flatMap { $0.activities })).sorted()
@@ -65,7 +68,9 @@ struct RecommendationContentView: View {
                 return true
             }()
             
-            return matchesSearch && matchesActivity && matchesCustom
+            let matchesPrice = shoe.price >= minPrice && shoe.price <= maxPrice
+            
+            return matchesSearch && matchesActivity && matchesCustom && matchesPrice
         }
     }
     
@@ -115,6 +120,21 @@ struct RecommendationContentView: View {
                 .padding(.horizontal, 24)
                 .padding(.vertical, 8)
             }
+            HStack(spacing: 8) {
+                Text("Price")
+                    .font(.subheadline)
+                TextField("Min", value: $minPrice, formatter: NumberFormatter())
+                    .frame(width: 60)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+                Text("-")
+                TextField("Max", value: $maxPrice, formatter: NumberFormatter())
+                    .frame(width: 60)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.decimalPad)
+            }
+            .padding(.horizontal, 24)
+            .padding(.vertical, 8)
             
             // Shoe list
             ScrollView {
@@ -135,6 +155,11 @@ struct RecommendationContentView: View {
         }
         .onAppear {
             config = UserDefaults.standard.shoeConfiguration
+            let prices = shoes.map(\.price)
+            if let min = prices.min(), let max = prices.max() {
+                minPrice = min
+                maxPrice = max
+            }
         }
         .sheet(item: $selectedForReview) { shoe in
             ReviewInputView(shoe: shoe)

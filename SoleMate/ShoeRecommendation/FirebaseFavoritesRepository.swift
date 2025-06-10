@@ -13,14 +13,14 @@ import FirebaseDatabase
 
 class FirebaseFavoritesRepository: ObservableObject {
     @Published var favorites: [Shoe] = []
-
+    
     private let dbRef = Database.database().reference()
     private var handle: DatabaseHandle?
-
+    
     init() {
         observeFavorites()
     }
-
+    
     private func observeFavorites() {
         guard let uid = Auth.auth().currentUser?.uid else {
             print("⚠️ No user logged in, cannot observe favorites")
@@ -36,7 +36,7 @@ class FirebaseFavoritesRepository: ObservableObject {
                     let id       = dict["id"] as? Int,
                     let name     = dict["name"] as? String,
                     let acts     = dict["activities"] as? [String],
-                    let sizing  = dict["sizingOption"] as? String,
+                    let sizing   = dict["sizingOption"] as? String,
                     let sizeDict = dict["sizeRange"] as? [String:Any],
                     let minL     = sizeDict["minFootLength"] as? Double,
                     let maxL     = sizeDict["maxFootLength"] as? Double,
@@ -44,22 +44,27 @@ class FirebaseFavoritesRepository: ObservableObject {
                     let minW     = sizeDict["minFootWidth"] as? Double,
                     let maxW     = sizeDict["maxFootWidth"] as? Double,
                     let wUnit    = sizeDict["footWidthUnit"] as? String,
-                    let arch     = dict["archType"] as? String
+                    let arch     = dict["archType"] as? String,
+                    let price    = dict["price"] as? Double
                 else { continue }
-
+                
                 let range = SizeRange(
                     minFootLength: minL, maxFootLength: maxL,
                     footLengthUnit: lUnit,
                     minFootWidth: minW, maxFootWidth: maxW,
                     footWidthUnit: wUnit
                 )
+                
                 let shoe = Shoe(
-                    id: id, name: name,
+                    id: id,
+                    name: name,
                     activities: acts,
                     sizingOption: sizing,
                     sizeRange: range,
-                    archType: arch
+                    archType: arch,
+                    price: price
                 )
+                
                 loaded.append(shoe)
             }
             DispatchQueue.main.async {
@@ -67,7 +72,7 @@ class FirebaseFavoritesRepository: ObservableObject {
             }
         }
     }
-
+    
     func toggleFavorite(_ shoe: Shoe) {
         guard let uid = Auth.auth().currentUser?.uid else {
             print("⚠️ No user logged in, cannot modify favorites")
@@ -92,12 +97,13 @@ class FirebaseFavoritesRepository: ObservableObject {
                     "maxFootWidth": shoe.sizeRange.maxFootWidth,
                     "footWidthUnit": shoe.sizeRange.footWidthUnit
                 ],
-                "archType": shoe.archType
+                "archType": shoe.archType,
+                "price": shoe.price
             ]
             favRef.setValue(payload)
         }
     }
-
+    
     deinit {
         if let uid = Auth.auth().currentUser?.uid, let handle = handle {
             dbRef.child("users").child(uid).child("favorites").removeObserver(withHandle: handle)
