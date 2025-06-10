@@ -1,8 +1,10 @@
 import FirebaseDatabase
+import FirebaseAuth
 
 class DiscussionViewModel: ObservableObject {
     @Published var posts: [DiscussionPost] = []
     @Published var userNames: [String: String] = [:] // userId: name
+    var authListenerHandle: AuthStateDidChangeListenerHandle?
 
     private var ref = Database.database().reference()
 

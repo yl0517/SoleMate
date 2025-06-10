@@ -5,6 +5,7 @@ struct DiscussionView: View {
     @StateObject private var viewModel = DiscussionViewModel()
     @State private var message = ""
     @FocusState private var isInputActive: Bool
+    @State private var isSignedIn = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -50,30 +51,56 @@ struct DiscussionView: View {
                 }
             }
 
-            // Input Bar
-            HStack {
-                TextField("Type a message...", text: $message)
-                    .padding(10)
-                    .background(Color.FCFBF9)
-                    .cornerRadius(16)
-                    .focused($isInputActive)
-                Button(action: {
-                    if let user = Auth.auth().currentUser, !message.trimmingCharacters(in: .whitespaces).isEmpty {
-                        viewModel.sendPost(userId: user.uid, message: message)
-                        message = ""
-                        isInputActive = false
+            // Input Bar - Only show when signed in
+            if isSignedIn {
+                HStack {
+                    TextField("Type a message...", text: $message)
+                        .padding(10)
+                        .background(Color.FCFBF9)
+                        .cornerRadius(16)
+                        .focused($isInputActive)
+                    Button(action: {
+                        if let user = Auth.auth().currentUser, !message.trimmingCharacters(in: .whitespaces).isEmpty {
+                            viewModel.sendPost(userId: user.uid, message: message)
+                            message = ""
+                            isInputActive = false
+                        }
+                    }) {
+                        Image(systemName: "paperplane.fill")
+                            .font(.system(size: 22))
+                            .foregroundColor(Color.CA0013)
+                            .padding(.horizontal, 8)
                     }
-                }) {
-                    Image(systemName: "paperplane.fill")
-                        .font(.system(size: 22))
-                        .foregroundColor(Color.CA0013)
-                        .padding(.horizontal, 8)
                 }
+                .padding(.horizontal)
+                .padding(.vertical, 8)
+                .background(Color.white.shadow(radius: 2))
+            } else {
+                // Show sign in prompt when not signed in
+                VStack {
+                    Text("Sign in to join the discussion")
+                        .foregroundColor(.secondary)
+                        .padding()
+                }
+                .frame(maxWidth: .infinity)
+                .background(Color.white.shadow(radius: 2))
             }
-            .padding(.horizontal)
-            .padding(.vertical, 8)
-            .background(Color.white.shadow(radius: 2))
         }
         .background(Color.EEEBE3.ignoresSafeArea())
+        .onAppear {
+            // Check authentication state and set up listener
+            isSignedIn = Auth.auth().currentUser != nil
+            // Store the handle so we can remove it later
+            viewModel.authListenerHandle = Auth.auth().addStateDidChangeListener { _, user in
+                isSignedIn = user != nil
+            }
+        }
+        .onDisappear {
+            // Remove the auth state listener when the view disappears
+            if let handle = viewModel.authListenerHandle {
+                Auth.auth().removeStateDidChangeListener(handle)
+                viewModel.authListenerHandle = nil
+            }
+        }
     }
 }
