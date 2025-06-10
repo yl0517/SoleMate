@@ -26,18 +26,18 @@ struct RecommendationContentView: View {
     private var filteredShoes: [Shoe] {
         shoes.filter { shoe in
             let matchesSearch = searchText.isEmpty ||
-                shoe.name.localizedCaseInsensitiveContains(searchText)
+            shoe.name.localizedCaseInsensitiveContains(searchText)
             
             let matchesActivity = selectedActivities.isEmpty ||
-                !selectedActivities.intersection(shoe.activities).isEmpty
+            !selectedActivities.intersection(shoe.activities).isEmpty
             
             let matchesCustom: Bool = {
                 guard useCustomFilter, let cfg = config else { return true }
                 
                 // convert user-entered measurements into cm
                 let lengthCm = (cfg.footLengthUnit == .inches)
-                    ? cfg.footLength * 2.54
-                    : cfg.footLength
+                ? cfg.footLength * 2.54
+                : cfg.footLength
                 guard
                     lengthCm >= shoe.sizeRange.minFootLength,
                     lengthCm <= shoe.sizeRange.maxFootLength
@@ -46,8 +46,8 @@ struct RecommendationContentView: View {
                 }
                 
                 let widthCm = (cfg.footWidthUnit == .inches)
-                    ? cfg.footWidth * 2.54
-                    : cfg.footWidth
+                ? cfg.footWidth * 2.54
+                : cfg.footWidth
                 guard
                     widthCm >= shoe.sizeRange.minFootWidth,
                     widthCm <= shoe.sizeRange.maxFootWidth
@@ -81,6 +81,18 @@ struct RecommendationContentView: View {
                 Image(systemName: "magnifyingglass")
                 TextField("Search shoes…", text: $searchText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .submitLabel(.done)
+                    .onSubmit {
+                        hideKeyboard()
+                    }
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Done") {
+                                hideKeyboard()
+                            }
+                        }
+                    }
             }
             .padding(.horizontal, 24)
             .padding(.top, 16)

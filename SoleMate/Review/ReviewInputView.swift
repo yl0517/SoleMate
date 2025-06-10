@@ -13,7 +13,7 @@ struct ReviewInputView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var reviewText = ""
     @State private var isLoading = false
-
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -27,7 +27,7 @@ struct ReviewInputView: View {
                             .stroke(Color.gray.opacity(0.3), lineWidth: 1)
                     )
                     .padding()
-
+                
                 // Centered, intrinsic-sized Submit button
                 HStack {
                     Spacer()
@@ -44,7 +44,7 @@ struct ReviewInputView: View {
                     Spacer()
                 }
                 .padding(.bottom, 20)
-
+                
                 Spacer()
             }
             .navigationTitle("Review \(shoe.name)")
@@ -55,14 +55,22 @@ struct ReviewInputView: View {
                 }
             }
             .background(Color.EEEBE3.ignoresSafeArea())
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        hideKeyboard()
+                    }
+                }
+            }
         }
     }
-
+    
     private func submitReview() {
         let text = reviewText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !text.isEmpty else { return }
         isLoading = true
-
+        
         let ref = Database.database().reference()
             .child("reviews")
             .child(String(shoe.id))
@@ -71,7 +79,7 @@ struct ReviewInputView: View {
             "text": text,
             "timestamp": Date().timeIntervalSince1970
         ]
-
+        
         ref.setValue(data) { error, _ in
             DispatchQueue.main.async {
                 self.isLoading = false

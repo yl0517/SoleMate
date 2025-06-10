@@ -69,6 +69,14 @@ struct Step3MeasurementsView: View {
                             footLengthValue = tmp
                         }
                     }
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Done") {
+                                hideKeyboard()
+                            }
+                        }
+                    }
 
                     unitToggle(for: LengthUnit.allCases, selection: $selectedLengthUnit)
                 }

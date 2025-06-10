@@ -65,13 +65,21 @@ struct Step1ActivityView: View {
                         TextField("Specify activity…", text: $otherActivityText)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.leading, 12)
+                            .toolbar {
+                                ToolbarItemGroup(placement: .keyboard) {
+                                    Spacer()
+                                    Button("Done") {
+                                        hideKeyboard()
+                                    }
+                                }
+                            }
                     }
                 }
             }
             
             Spacer()
             
-           
+            
             Button(action: {
                 showStep2 = true
             }) {
