@@ -37,14 +37,9 @@ struct ShoeCardView: View {
                             .foregroundColor(Color.CA0013)
                     }
                     
-                    Text(shoe.price)
+                    Text(shoe.formattedPrice)
                         .font(.system(size: 12, weight: .semibold))
                         .foregroundColor(Color.textDark)
-                    
-                    Text(shoe.description)
-                        .font(.system(size: 12))
-                        .foregroundColor(Color.textDark)
-                        .lineLimit(3)
                 }
                 .padding(.vertical, 6)
                 .padding(.trailing, 8)
