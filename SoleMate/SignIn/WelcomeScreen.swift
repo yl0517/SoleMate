@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct WelcomeScreen: View {
     @State private var goToRegister = false
@@ -61,6 +62,7 @@ struct WelcomeScreen: View {
                             }
 
                             Button(action: {
+                                try? Auth.auth().signOut()
                                 goToHome = true
                             }) {
                                 Text("Continue As Guest")

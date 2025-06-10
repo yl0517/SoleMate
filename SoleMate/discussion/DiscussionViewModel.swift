@@ -1,5 +1,5 @@
 import FirebaseDatabase
-
+import FirebaseAuth
 class DiscussionViewModel: ObservableObject {
     @Published var posts: [DiscussionPost] = []
     @Published var userNames: [String: String] = [:] // userId: name
@@ -57,4 +57,6 @@ class DiscussionViewModel: ObservableObject {
         ]
         postRef.setValue(postDict)
     }
+
+
 }
